@@ -1,0 +1,1 @@
+import TaskCollection from 'main.js';
