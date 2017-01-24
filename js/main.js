@@ -17,7 +17,7 @@ class Person {
 let names = ['Bogdan', 'Diman', 'Ioan'];
 
 
-names = names.map(k => k + ' is cool');
+names = names.map(k => k + ' is cool 2');
 
 console.log(names);
 

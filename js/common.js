@@ -27,16 +27,17 @@ var Person = function () {
 
 // new Person([123,55,77]).prepare();
 
+
 var names = ['Bogdan', 'Diman', 'Ioan'];
 
 names = names.map(function (k) {
-	return k + ' is cool';
+	return k + ' is cool 2';
 });
 
 console.log(names);
 
 function discount(cost) {
-	var discount = arguments.length <= 1 || arguments[1] === undefined ? .10 : arguments[1];
+	var discount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : .10;
 
 
 	return cost - cost * discount;
@@ -63,8 +64,8 @@ $('body').prepend(template);
 console.log(template);
 
 function dest(_ref) {
-	var a = _ref.a;
-	var b = _ref.b;
+	var a = _ref.a,
+	    b = _ref.b;
 
 	console.log(a);
 }
@@ -147,6 +148,7 @@ console.log(hhh.firstTask);
 // let pi = 0;
 
 // alert(phrase.next());
+
 
 function iterator(name) {
 	return regeneratorRuntime.wrap(function iterator$(_context) {
