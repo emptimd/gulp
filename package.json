@@ -30,7 +30,9 @@
     "gulp.spritesmith": "latest",
     "node-notifier": "latest",
     "postcss-nested": "^1.0.0",
-    "rev-del": "latest"
+    "rev-del": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-if": "latest"
   },
   "babel": {
     "presets": [

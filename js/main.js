@@ -134,6 +134,7 @@ console.log(hhh.firstTask);
 function *iterator(name) {
 	yield 'hello '+name;
 	yield 'i h 1you later11111!';
+	yield 'Last One!';
 }
 
 let iter = iterator('Bogdan');
@@ -141,7 +142,13 @@ let iter = iterator('Bogdan');
 
 $('.inside').on('click',function(){
 	let $this = $(this);
-	$('body').append(`
-		<p>${iter.next().value}</p>
-	`)
+	let val = iter.next().value;
+	if(val)
+		$('body').append(`
+			<p>${val}</p>
+		`)
+});
+
+$(function() {
+	$('.alert:first').remove();
 });

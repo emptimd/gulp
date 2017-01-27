@@ -18,6 +18,8 @@ var gulp = require('gulp');                             // gulp core
     var plumber = require('gulp-plumber');
     var notify = require("gulp-notify");
     var babel = require("gulp-babel");
+    var sourcemaps = require('gulp-sourcemaps');
+    var gulpif = require('gulp-if');
 
     
 /*******************************************************************************
@@ -54,6 +56,13 @@ var other = {                                           // other js files to be 
 }
 
 var currentSprite = 'payment';
+
+var is_production = false;
+var  i = process.argv.indexOf("--production");
+if(i>-1) {
+    is_production = true;
+}
+
  
 /*******************************************************************************
 3. LESS TASK
@@ -70,12 +79,16 @@ gulp.task('less', function() {
 		title: 'test',
 		message: "<%= error.message %>"
 		})}))
+        .pipe(sourcemaps.init())
         .pipe(less())                                   // compile all less
 	.on('error', beep)
         .pipe(autoprefixer(                             // complete css with correct vendor prefixes
             'last 2 version'
         ))
+        .pipe(gulpif(is_production, minifycss({keepSpecialComments:0})))
+        .pipe(gulpif(!is_production, sourcemaps.write()))
         // .pipe(minifycss({keepSpecialComments:0}))
+        // .pipe(sourcemaps.write())
         .pipe(gulp.dest(target.css_dest))               // where to put the file
         .pipe(browserSync.reload({stream:true, once: true}));
 });
@@ -103,14 +116,19 @@ gulp.task('js-concat', function() {
             title: 'JS error',
             message: "<%= error.message %>"
         })}))
+        .pipe(sourcemaps.init())
         // .pipe(stripDebug())                             // remove logging
         // .pipe(uglify())                                 // uglify the files
         .pipe(newer('js/common.js'))                    // only changed files
         .pipe(concat('common.js'))                      // concatinate to one file
+        
         .pipe(babel({
             presets: ['es2015']
         }))
         .on('error', beep)
+        .pipe(gulpif(is_production, stripDebug()))
+        .pipe(gulpif(is_production, uglify()))
+        .pipe(gulpif(!is_production, sourcemaps.write()))
         .pipe(gulp.dest(target.js_dest))                // where to put the files
         .pipe(browserSync.reload({stream:true, once: true}));
 });
