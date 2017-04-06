@@ -1,19 +1,27 @@
-'use strict';
+var _regenerator = require('babel-runtime/regenerator');
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _regenerator2 = _interopRequireDefault(_regenerator);
 
-var _marked = [iterator].map(regeneratorRuntime.mark);
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _marked = [iterator].map(_regeneratorRuntime.mark);
 
 var Person = function () {
 	function Person(tasks) {
-		_classCallCheck(this, Person);
+		(0, _classCallCheck3.default)(this, Person);
 
 		this.tasks = tasks;
 	}
 
-	_createClass(Person, [{
+	(0, _createClass3.default)(Person, [{
 		key: 'prepare',
 		value: function prepare() {
 			this.tasks.forEach(function (task) {
@@ -21,7 +29,6 @@ var Person = function () {
 			});
 		}
 	}]);
-
 	return Person;
 }();
 
@@ -34,13 +41,6 @@ names = names.map(function (k) {
 });
 
 console.log(names);
-
-function discount(cost) {
-	var discount = arguments.length <= 1 || arguments[1] === undefined ? .10 : arguments[1];
-
-
-	return cost - cost * discount;
-}
 
 function calcSum() {
 	for (var _len = arguments.length, numbers = Array(_len), _key = 0; _key < _len; _key++) {
@@ -73,13 +73,13 @@ dest({ a: 3, b: 6 });
 
 var Person2 = function () {
 	function Person2(x, y) {
-		_classCallCheck(this, Person2);
+		(0, _classCallCheck3.default)(this, Person2);
 
 		this.x = x;
 		this.y = y;
 	}
 
-	_createClass(Person2, [{
+	(0, _createClass3.default)(Person2, [{
 		key: 'name',
 		value: function name() {
 			return this.name;
@@ -105,7 +105,6 @@ var Person2 = function () {
 			return 'Person2';
 		}
 	}]);
-
 	return Person2;
 }();
 
@@ -119,12 +118,12 @@ console.log(Person2.className);
 
 var TaskCollection = function () {
 	function TaskCollection(tasks) {
-		_classCallCheck(this, TaskCollection);
+		(0, _classCallCheck3.default)(this, TaskCollection);
 
 		this.tasks = tasks;
 	}
 
-	_createClass(TaskCollection, [{
+	(0, _createClass3.default)(TaskCollection, [{
 		key: 'dump',
 		value: function dump() {
 			console.log(this.tasks);
@@ -135,7 +134,6 @@ var TaskCollection = function () {
 			return this.tasks[0];
 		}
 	}]);
-
 	return TaskCollection;
 }();
 
@@ -149,7 +147,7 @@ console.log(hhh.firstTask);
 // alert(phrase.next());
 
 function iterator(name) {
-	return regeneratorRuntime.wrap(function iterator$(_context) {
+	return _regenerator2.default.wrap(function iterator$(_context) {
 		while (1) {
 			switch (_context.prev = _context.next) {
 				case 0:
@@ -158,7 +156,7 @@ function iterator(name) {
 
 				case 2:
 					_context.next = 4;
-					return 'i h 1you later11111!';
+					return 'i h 1you later111!';
 
 				case 4:
 				case 'end':
@@ -168,9 +166,11 @@ function iterator(name) {
 	}, _marked[0], this);
 }
 
-var iter = iterator('Bogdan');
+// let iter = iterator('Bogdan');
 
-$('.inside').on('click', function () {
-	var $this = $(this);
-	$('body').append('\n\t\t<p>' + iter.next().value + '</p>\n\t');
-});
+// $('.inside').on('click',function(){
+// 	let $this = $(this);
+// 	$('body').append(`
+// 		<p>${iter.next()}</p>
+// 	`)
+// });
