@@ -4,10 +4,11 @@
  
 const gulp = require('gulp');                             // gulp core
     less = require('gulp-less'),                        // less compiler
+    sass = require('gulp-sass'),
     uglify = require('gulp-uglify'),                    // uglifies the js
     rename = require("gulp-rename");                    // rename files
     concat = require('gulp-concat'),                    // concatinate js
-    minifycss = require('gulp-minify-css'),             // minify the css files
+    minifycss = require('gulp-clean-css'),              // minify the css files
     browserSync = require('browser-sync'),              // inject code to all devices
     autoprefixer = require('gulp-autoprefixer'),        // sets missing browserprefixes
     imagemin = require('gulp-imagemin'),                // optimize images
@@ -15,12 +16,13 @@ const gulp = require('gulp');                             // gulp core
     stripDebug = require('gulp-strip-debug'),           // remove debug log
     cache = require('gulp-cache'),                      // cache gulp tasks
     newer = require('gulp-newer');                      // check files for changes
-    const plumber = require('gulp-plumber');
-    const notify = require("gulp-notify");
-    const babel = require("gulp-babel");
-    const sourcemaps = require('gulp-sourcemaps');
-    const gulpif = require('gulp-if');
-    const gcmq = require('gulp-group-css-media-queries');
+    var plumber = require('gulp-plumber');
+    var notify = require("gulp-notify");
+    var babel = require("gulp-babel");
+    var postcss = require('gulp-postcss');
+    var postcssFlexbugsFixes = require('postcss-flexbugs-fixes');
+    var gcmq = require('gulp-group-css-media-queries');
+    var combineMq = require('gulp-combine-mq');
 
     
 /*******************************************************************************
@@ -29,6 +31,7 @@ const gulp = require('gulp');                             // gulp core
  
 var target = {
     less_src : 'less/main.less',                        // all less files
+    sass_src : 'sass/bootstrap.scss',
     css_dest : 'css',                                   // where to put minified css
     js_lint_src : [                                     // all js that should be linted
         'js/build/app.js',
@@ -58,12 +61,9 @@ var other = {                                           // other js files to be 
 
 var currentSprite = 'payment';
 
-var is_production = false;
-var  i = process.argv.indexOf("--production");
-if(i>-1) {
-    is_production = true;
-}
-
+var plugins = [
+    postcssFlexbugsFixes
+  ];
  
 /*******************************************************************************
 3. LESS TASK
@@ -80,16 +80,54 @@ gulp.task('less', function() {
 		title: 'test',
 		message: "<%= error.message %>"
 		})}))
-        .pipe(sourcemaps.init())
         .pipe(less())                                   // compile all less
-	.on('error', beep)
-        .pipe(autoprefixer(                             // complete css with correct vendor prefixes
-            'last 2 version'
-        ))
-        .pipe(gulpif(is_production, minifycss({keepSpecialComments:0})))
-        .pipe(gulpif(!is_production, sourcemaps.write()))
-        // .pipe(minifycss({keepSpecialComments:0}))
-        // .pipe(sourcemaps.write())
+		.on('error', beep)
+        .pipe(autoprefixer({                             // complete css with correct vendor prefixes
+        	// browsers: ['last 2 versions'],
+        	browsers: [
+	        'Chrome >= 35',
+	        'Firefox >= 38',
+	        'Edge >= 12',
+	        'Explorer >= 10',
+	        'iOS >= 8',
+	        'Safari >= 8',
+	        'Android 2.3',
+	        'Android >= 4',
+	        'Opera >= 12'
+      		]
+        }))
+        // .pipe(minifycss({specialComments:0}))
+        .pipe(gulp.dest(target.css_dest))               // where to put the file
+        .pipe(browserSync.reload({stream:true, once: true}));
+});
+
+
+gulp.task('sass', function() {
+    gulp.src(target.sass_src)                           // get the files
+	.pipe(plumber({errorHandler: notify.onError({
+		title: 'Sass',
+		message: "<%= error.message %>"
+		})}))
+        .pipe(sass())                                   // compile all less
+		.on('error', beep)
+        .pipe(autoprefixer({
+        	browsers: ['last 2 versions'],
+        //     browsers: [
+	       //  'Chrome >= 35',
+	       //  'Firefox >= 38',
+	       //  'Edge >= 12',
+	       //  'Explorer >= 10',
+	       //  'iOS >= 8',
+	       //  'Safari >= 8',
+	       //  'Android 2.3',
+	       //  'Android >= 4',
+	       //  'Opera >= 12'
+      		// ],
+            cascade: false
+        }))
+        .pipe(postcss(plugins))
+        .pipe(gcmq())
+        // .pipe(minifycss({specialComments:0}))
         .pipe(gulp.dest(target.css_dest))               // where to put the file
         .pipe(browserSync.reload({stream:true, once: true}));
 });
@@ -125,19 +163,14 @@ gulp.task('js-concat', function() {
             title: 'JS error',
             message: "<%= error.message %>"
         })}))
-        .pipe(sourcemaps.init())
         // .pipe(stripDebug())                             // remove logging
         // .pipe(uglify())                                 // uglify the files
         .pipe(newer('js/common.js'))                    // only changed files
         .pipe(concat('common.js'))                      // concatinate to one file
-        
         .pipe(babel({
             presets: ['es2015']
         }))
         .on('error', beep)
-        .pipe(gulpif(is_production, stripDebug()))
-        .pipe(gulpif(is_production, uglify()))
-        .pipe(gulpif(!is_production, sourcemaps.write()))
         .pipe(gulp.dest(target.js_dest))                // where to put the files
         .pipe(browserSync.reload({stream:true, once: true}));
 });
@@ -213,12 +246,14 @@ gulp.task('sprite', function () {
 
 gulp.task('watch', function () {
     gulp.watch('less/**/*.less',['less']);
+    gulp.watch('sass/**/*.scss',['sass']);
     gulp.watch(target.js_concat_src, ['js-concat']);
-    // gulp.watch(["*.html",'*.php'], ['bs-reload']);
+    gulp.watch(["*.html",'*.php'], ['bs-reload']);
 });
 
 gulp.task('default', [/*'js-uglify', */'js-concat'/*, 'js-other'*/, 'less']);
 gulp.task('dev', ['js-concat', 'less', 'browser-sync', 'watch']);
-// gulp.task('build', ['js-concat', 'less', 'browser-sync-proxy', 'watch']);
+gulp.task('build', ['js-concat', 'less', 'browser-sync-proxy', 'watch']);
 gulp.task('images', ['image-min']);
 gulp.task('sprites', ['sprite']);
+gulp.task('wp', ['image-resize']);

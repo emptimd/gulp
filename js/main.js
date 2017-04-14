@@ -22,7 +22,7 @@ $('body').prepend('<h1>'+VERSION+'</h1>')
 let names = ['Bogdan', 'Diman', 'Ioan'];
 
 
-names = names.map(k => k + ' is cool 2');
+names = names.map(k => k + ' is cool');
 
 console.log(names);
 
@@ -137,7 +137,6 @@ console.log(hhh.firstTask);
 function *iterator(name) {
 	yield 'hello '+name;
 	yield 'i h 1you later11111!';
-	yield 'Last One!';
 }
 
 let iter = iterator('Bogdan');
@@ -145,13 +144,7 @@ let iter = iterator('Bogdan');
 
 $('.inside').on('click',function(){
 	let $this = $(this);
-	let val = iter.next().value;
-	if(val)
-		$('body').append(`
-			<p>${val}</p>
-		`)
-});
-
-$(function() {
-	$('.alert:first').remove();
+	$('body').append(`
+		<p>${iter.next().value}</p>
+	`)
 });

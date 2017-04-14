@@ -1,22 +1,427 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>gulp</title>
-	<link rel="stylesheet" href="css/main.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Linkquidator is a professional backlinks checking tool! Avoid Google Penalty - Find and remove all the bad links pointing to your website!">
+    <meta name="keyword" content="penalty, google, penalized, google penalty, bad links, panda, penguin, backlinks, remove, linkquidator">
+    <title>Service to find and remove bad links – Linkquidator.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+    <link type="image/x-icon" href="http://linkquidator/favicon.ico?123" rel="shortcut icon" sizes="16x16">
+    <!-- Bootstrap Core CSS -->
+    <!-- <link media="all" type="text/css" rel="stylesheet" href="http://linkquidator/landing/css/bootstrap.min.css"> -->
+    <link media="all" type="text/css" rel="stylesheet" href="css/bootstrap.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  --> 
+    <link media="all" type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Lato:400,100italic,300italic,100,300,400italic,700,700italic,900">
+
+    <link media="all" type="text/css" rel="stylesheet" href="http://linkquidator/build/css/all-aff219fced1.css">
+
+
 </head>
-<body>
-	azazaz KAK DELA valet
-	<div class="box">
-		11
-		<div class="inside">
-			22
-		</div><!-- / div.inside -->
-	</div><!-- / div.box -->
-	<script src="//code.jquery.com/jquery-latest.min.js"></script>
 
-	<script src="node_modules/babel-polyfill/dist/polyfill.js"></script>
+<body class="">
 
-	<script src="js/common.js"></script>
+<select name="testq" id="test" class="custom-select">
+    <option value="test">test1</option>
+    <option value="test">test2</option>
+    <option value="test">test3</option>
+    <option value="test">test4</option>
+    <option value="test">test5</option>
+</select>
+<!-- Navigation -->
+    <!-- <nav class="navbar navbar-linkquidator navbar-fixed-top" role="navigation">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="http://linkquidator"><img src="http://linkquidator/landing/images/logo.png" class="img-responsive"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class=" active"><a href="http://linkquidator">Home</a></li>
+                        <li class=""><a href="http://linkquidator/pricing">Pricing</a></li>
+                        <li class=""><a href="http://linkquidator/affiliate">Affiliate</a></li>
+                        <li class=""><a href="http://linkquidator/faq">Faq</a></li>
+                        <li class=""><a href="http://linkquidator/contact">Contact Us</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                                                    <li><a href="http://linkquidator/dashboard">Dashboard</a></li>
+                            <li><a href="http://linkquidator/logout">Logout</a></li>
+                                            </ul>
+                </div>
+                /.nav-collapse
+            </div>
+            /.container-fluid
+        </nav>
+        /.navbar-collapse
+    </div>
+    /.container
+    </nav> -->
+
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<!--main content goes here-->
+<!-- Page Content -->
+<section class="header-bg padding-top-150 padding-bottom-40">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h1 class="lato-bold-80 color-white">Professional Service</h1>
+                <h4 class="lato-regular-36 color-white padding-top-10">for finding and removing <span
+                            class="google-blue">G</span><span
+                            class="google-red">o</span><span class="google-yellow">o</span><span
+                            class="google-blue">g</span><span class="google-green">l</span><span class="google-red">e</span>
+                    unnatural links</h4>
+            </div>
+            <div class="col-sm-offset-1 col-sm-10 padding-top-60 text-center posrel">
+                <div class="row padding-bottom-20">
+                    <a href="#how-it-works" id="how-it-works-link" class="open-popup-link"><span class="color-white lato-medium-24"><img src="http://linkquidator/landing/images/play-icon.png"
+                                                                                       class="margin-right-5"/> How it works? (1 min video)</span></a>
+                </div>
+                <div class="row search-wrapper margin-bottom--90">
+                    <form action="http://linkquidator/demo" method="post" id="demo"><input type="hidden" name="_token" value="S6AF3UHJOX98w0l2do6vpBF13RjBjJrpyx2lurBB">
+                        <div class="col-xs-12 col-sm-8 col-md-9">
+                            <div class="form-group has-feedback has-feedback-left">
+                                <label class="control-label sr-only"></label>
+                                <input id="demo-url" type="url" class="form-control" name="url"
+                                       placeholder="Enter your site to find unnatural links ...."/>
+                                <i class="form-control-feedback glyphicon glyphicon-search"></i>
+                                                                
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3"><button class="btn btn-orange lato-bold-22"><span class="color-white text-shadow">Search Now</span></button></div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="padding-top-130 padding-bottom-50">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xs-6 col-sm-3 col-md-3">
+                <div class="item-wrapper text-center">
+                    <div class="padding-bottom-10">
+                        <img src="http://linkquidator/landing/images/icon-domain-registration.png" alt=""/>
+                    </div>
+                    <div class="serv-block-list">
+                        <h5 class="lato-bold-24 color-main margin-bottom-0">2.430</h5>
+
+                        <p class="lato-regular-18 color-main">
+                            Websites Saved
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3">
+                <div class="item-wrapper text-center">
+                    <div class="padding-bottom-10">
+                        <img src="http://linkquidator/landing/images/icon-browser.png" alt=""/>
+                    </div>
+                    <div class="serv-block-list">
+                        <h5 class="lato-bold-24 color-main margin-bottom-0">3.650 k</h5>
+
+                        <p class="lato-regular-18 color-main">
+                            Links Detected
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3">
+                <div class="item-wrapper text-center">
+                    <div class="padding-bottom-10">
+                        <img src="http://linkquidator/landing/images/icon-team.png" alt=""/>
+                    </div>
+                    <div class="serv-block-list">
+                        <h5 class="lato-bold-24 color-main margin-bottom-0">720</h5>
+
+                        <p class="lato-regular-18 color-main">
+                            Active Users
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3">
+                <div class="item-wrapper text-center">
+                    <div class="padding-bottom-10">
+                        <img src="http://linkquidator/landing/images/icon-internet-signal.png" alt=""/>
+                    </div>
+                    <div class="serv-block-list">
+                        <h5 class="lato-bold-24 color-main margin-bottom-0">24</h5>
+
+                        <p class="lato-regular-18 color-main">
+                            Link Sources
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid padding-top-40 padding-bottom-50 border-bottom-gray">
+
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-5 col-lg-offset-2 col-lg-4">
+                <h1 class="lato-bold-75 color-headline-gray padding-bottom-10">01</h1>
+
+                <h2 class="lato-bold-30 color-text-heading padding-bottom-10">Full analysis of your BAD links</h2>
+
+                <p class="lato-regular-18 color-text">
+                    At the beginning, we evaluate all your backlinks. Then, we use 20 different parameters to determine
+                    which of these links could really harm your website and should be removed.
+                </p>
+
+                <p class="lato-regular-18 color-text padding-bottom-20">
+                    The links which are considered malicious by our unique algorithm are given a ”linkquidator index”.
+                    You will receive all the needed information to understand easily why the link is considered bad and
+                    how it should be removed.
+                </p>
+                <a href="http://linkquidator/register" class="btn btn-orange"><span class="color-white lato-bold-24 text-shadow">Get Started!</span></a>
+            </div>
+            <div class="hidden-xs col-sm-6 col-md-4 col-lg-4">
+                <img src="http://linkquidator/landing/images/analysis-icon.png" alt="" class="center-block img-responsive padding-top-110"/>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid padding-top-50 padding-bottom-70 border-bottom-gray">
+
+        <div class="row">
+
+            <div class="hidden-xs col-sm-6 col-md-offset-2 col-md-4">
+                <img src="http://linkquidator/landing/images/graph-icon.png" alt="" class="center-block img-responsive padding-top-80"/>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <h1 class="lato-bold-75 color-headline-gray padding-bottom-10">02</h1>
+
+                <h2 class="lato-bold-30 color-text-heading padding-bottom-10">Regain Rankings & Get Traffic</h2>
+
+                <p class="lato-regular-18 color-text padding-bottom-20">
+                    We have detected more than 3.500.000 bad links so far and surely can say the impact is seen
+                    immediately - within first month websites' positions have been lifted up and their rankings have
+                    been regained.
+                </p>
+
+                <p class="lato-regular-18 color-text">
+                    Cleaning up your backlinks, besides regain rankings, gives you possibility to boost traffic by using
+                    low-frequency queries.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid padding-top-50 padding-bottom-20 ">
+
+        <div class="row">
+
+            <div class="col-sm-6 col-md-offset-2 col-md-4">
+                <h1 class="lato-bold-75 color-headline-gray padding-bottom-10">03</h1>
+
+                <h2 class="lato-bold-30 color-text-heading padding-bottom-10">Unnatural Links Warning?</h2>
+
+                <p class="lato-regular-18 color-text padding-bottom-20">
+                    If you haven’t received yet such a warning, do not hesitate! It may happen to you very soon, as
+                    Google is now scrupulously and constantly analyzing every website to give penalties. You should
+                    prevent that and remove the bad links you have. Linkquidator has saved more than 2.000 websites so
+                    far, by preventing them from penalties or getting them out of the penalization box and regain their
+                    rankings.
+                </p>
+            </div>
+            <div class="hidden-xs col-sm-6 col-md-4">
+                <img src="http://linkquidator/landing/images/unnatural-icon.png" alt="" class="center-block img-responsive padding-top-30"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- cta -->
+<section class="padding-top-50 padding-bottom-50 cta-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h3 class="lato-bold-60 color-white padding-bottom-10">Start your FREE 7-day trial today!</h3>
+
+                <p class="lato-medium-24 color-white padding-bottom-30">Linquidator – get rid of your bad links! Avoid
+                    Google penalty.</p>
+                <a href="http://linkquidator/register" class="btn btn-orange lato-bold-30 margin-bottom-10"><span
+                            class="color-white">Get Started!</span></a>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end cta -->
+
+<!-- testimonials section-->
+<section id="testimonials" class="padding-top-80 padding-bottom-50">
+
+    <div class="container">
+        <div class="col-sm-offset-2 col-sm-8">
+            <div id="owl-example1" class="owl-carousel1">
+                
+                    <div class="testimonial-wrapper padding-bottom-30">
+                        <div class="img-wrapper">
+                            <img src="http://linkquidator/landing/images/client-first.png" alt="" class=""/>
+
+                            <p class="lato-bold-20 color-text-heading">Tim Ward
+                            </p>
+                        <span class="lato-regular-18 color-text">"Great team, perfect service. 2 months and reconsideration
+                            approve, my business is out of penalty
+                            and it’s 100% your help"</span>
+                        </div>
+                    </div>
+                
+
+                
+                    <div class="testimonial-wrapper padding-bottom-30">
+                        <div class="img-wrapper">
+                            <img src="http://linkquidator/landing/images/client-second.png" alt="" class=""/>
+
+                            <p class="lato-bold-20 color-text-heading">Mark Ruby
+                            </p>
+                        <span class="lato-regular-18 color-text">
+                            "Don’t know how it works, but it shows me perfect list of most critical shit- links ))) I made disavow – TY guys! Totally pleased!"
+                        </span>
+                        </div>
+                    </div>
+                
+                
+                    <div class="testimonial-wrapper padding-bottom-30">
+                        <div class="img-wrapper">
+                            <img src="http://linkquidator/landing/images/client-last.png" alt="" class=""/>
+
+                            <p class="lato-bold-20 color-text-heading">Valeria Garcia
+                            </p>
+                        <span class="lato-regular-18 color-text">
+                            "Thanks guys for awesome experience. I had no idea about my bad links, thanks for cleaning them.
+                            Our little store doesn’t need a penalty again))"
+                        </span>
+                        </div>
+                    </div>
+                
+            </div>
+            <div class="owl-controls clickable">
+                <div class="owl-pagination">
+                    <div class="owl-page active"><span class=""></span></div>
+                    <div class="owl-page"><span class=""></span></div>
+                    <div class="owl-page"><span class=""></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- end testimonials section-->
+<style>
+    #testimonials {
+        /*opacity: 0;*/
+        /*display: none;*/
+    }
+    #owl-example1 {
+        height: 119px;
+        overflow: hidden;
+    }
+</style>
+<div id="how-it-works" class="white-popup transparent mfp-hide text-center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/RuOlG9kUZi4" frameborder="0" allowfullscreen></iframe>
+</div>
+
+    <!-- partners section -->
+<section class="gray-bg padding-top-30 padding-bottom-30">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-1 padding-top-30 padding-bottom-30"><img src="http://linkquidator/landing/images/ebay-partner.png"
+                                                                                        alt="" class="center-block"/>
+            </div>
+            <div class="col-md-2 padding-top-30 padding-bottom-30"><img src="http://linkquidator/landing/images/people-partner.png" alt=""
+                                                                        class="center-block"/></div>
+            <div class="col-md-2 padding-top-30 padding-bottom-30"><img src="http://linkquidator/landing/images/seomoz-partner.png" alt=""
+                                                                        class="center-block padding-top-5"/></div>
+            <div class="col-md-2 padding-top-30 padding-bottom-30"><img src="http://linkquidator/landing/images/trulia-partner.png" alt=""
+                                                                        class="center-block"/></div>
+            <div class="col-md-2 padding-top-30 padding-bottom-30"><img src="http://linkquidator/landing/images/expedia-partner.png" alt=""
+                                                                        class="center-block"/></div>
+        </div>
+    </div>
+</section>
+<!-- end partners section -->
+
+<!-- Footer -->
+<footer class="footer-bg">
+    <div class="container padding-top-40 padding-bottom-100">
+        <div class="row">
+            <div class="col-xs-12 col-sm-3">
+                <a><img src="http://linkquidator/landing/images/logo.png" alt="Linkquidator" class="center-block img-responsive"/></a>
+
+                <p class="lato-regular-16 footer-gray-color margin-top-10">Regain Rankings & Get Traffic</p>
+            </div>
+            <div class="col-xs-12 col-sm-7">
+                <ul class="footer-menu">
+                    <li><a href="http://linkquidator">Home</a></li>
+                    <li><a href="http://linkquidator/pricing">Pricing</a></li>
+                    <li><a href="http://linkquidator/faq">Faq</a></li>
+                    <li><a href="http://linkquidator/affiliate">Affiliate</a></li>
+                    <li><a href="http://linkquidator/terms">Terms of Use</a></li>
+                    <li><a href="http://linkquidator/refund-policy">Refund Policy</a></li>
+                    <li><a href="http://linkquidator/contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-2">
+                <a class="social-icons social-icon-full"><i class="fa fa-facebook"></i></a>
+                <a class="social-icons social-icon--border"><i class="fa fa-twitter"></i></a>
+                <a class="social-icons social-icon--border"><i class="fa fa-google-plus"></i></a>
+                <p class="footer-gray-color lato-regular-16">Linkquidator Ltd.</p>
+            </div>
+        </div>
+    </div>
+</footer>    
+<script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous" defer></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="js/bootstrap.min.js" defer></script>
+
+<script src="js/landing-fc0b2067fa.js" defer></script>
+
 </body>
+
 </html>

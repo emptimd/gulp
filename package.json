@@ -14,24 +14,35 @@
     "gulp-autoprefixer": "latest",
     "gulp-babel": "^6.1.2",
     "gulp-cache": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-combine-media-queries": "^0.2.0",
+    "gulp-combine-mq": "^0.4.0",
     "gulp-concat": "latest",
     "gulp-group-css-media-queries": "^1.2.0",
+<<<<<<< HEAD
     "gulp-if": "latest",
+=======
+>>>>>>> 51567a60d82a1666acb69be1c123dbc658d676b9
     "gulp-imagemin": "latest",
     "gulp-less": "latest",
-    "gulp-minify-css": "latest",
     "gulp-newer": "latest",
     "gulp-notify": "latest",
     "gulp-plumber": "latest",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "latest",
     "gulp-rev": "latest",
+<<<<<<< HEAD
     "gulp-sourcemaps": "latest",
+=======
+    "gulp-rollup": "^2.3.0",
+    "gulp-sass": "^3.1.0",
+>>>>>>> 51567a60d82a1666acb69be1c123dbc658d676b9
     "gulp-strip-debug": "latest",
     "gulp-uglify": "latest",
     "gulp-util": "latest",
     "gulp.spritesmith": "latest",
     "node-notifier": "latest",
+    "postcss-flexbugs-fixes": "^2.1.0",
     "postcss-nested": "^1.0.0",
     "rev-del": "latest"
   },
