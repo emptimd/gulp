@@ -2,7 +2,7 @@
 1. DEPENDENCIES
 *******************************************************************************/
  
-var gulp = require('gulp');                             // gulp core
+const gulp = require('gulp');                             // gulp core
     less = require('gulp-less'),                        // less compiler
     uglify = require('gulp-uglify'),                    // uglifies the js
     rename = require("gulp-rename");                    // rename files
@@ -15,11 +15,12 @@ var gulp = require('gulp');                             // gulp core
     stripDebug = require('gulp-strip-debug'),           // remove debug log
     cache = require('gulp-cache'),                      // cache gulp tasks
     newer = require('gulp-newer');                      // check files for changes
-    var plumber = require('gulp-plumber');
-    var notify = require("gulp-notify");
-    var babel = require("gulp-babel");
-    var sourcemaps = require('gulp-sourcemaps');
-    var gulpif = require('gulp-if');
+    const plumber = require('gulp-plumber');
+    const notify = require("gulp-notify");
+    const babel = require("gulp-babel");
+    const sourcemaps = require('gulp-sourcemaps');
+    const gulpif = require('gulp-if');
+    const gcmq = require('gulp-group-css-media-queries');
 
     
 /*******************************************************************************
@@ -91,6 +92,14 @@ gulp.task('less', function() {
         // .pipe(sourcemaps.write())
         .pipe(gulp.dest(target.css_dest))               // where to put the file
         .pipe(browserSync.reload({stream:true, once: true}));
+});
+
+
+gulp.task('cmq', function () {
+  gulp.src('css/bootstrap.css')
+    .pipe(gcmq())
+    .pipe(minifycss({keepSpecialComments:0}))
+    .pipe(gulp.dest('dist'));
 });
  
  

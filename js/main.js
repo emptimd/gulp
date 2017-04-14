@@ -10,6 +10,11 @@ class Person {
 
 }
 
+
+const VERSION = 1.11;
+
+$('body').prepend('<h1>'+VERSION+'</h1>')
+
 // new Person([123,55,77]).prepare();
 
 
@@ -20,8 +25,6 @@ let names = ['Bogdan', 'Diman', 'Ioan'];
 names = names.map(k => k + ' is cool 2');
 
 console.log(names);
-
-
 
 
 
