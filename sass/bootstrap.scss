@@ -18,9 +18,9 @@
 @import "reboot";
 @import "type";
 @import "images";
-// @import "code";
+@import "code";
 @import "grid";
-// @import "tables";
+@import "tables";
 @import "forms";
 @import "buttons";
 
@@ -32,11 +32,11 @@
 @import "custom-forms";
 @import "nav";
 @import "navbar";
-// @import "card";
-// @import "breadcrumb";
-// @import "pagination";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
 @import "badge";
-// @import "jumbotron";
+@import "jumbotron";
 @import "alert";
 @import "progress";
 @import "media";
@@ -47,8 +47,8 @@
 // Components w/ JavaScript
 @import "modal";
 @import "tooltip";
-// @import "popover";
-// @import "carousel";
+@import "popover";
+@import "carousel";
 
 // Utility classes
 @import "utilities";

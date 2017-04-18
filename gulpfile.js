@@ -125,9 +125,9 @@ gulp.task('sass', function() {
       		// ],
             cascade: false
         }))
-        .pipe(postcss(plugins))
+        // .pipe(postcss(plugins))
         .pipe(gcmq())
-        // .pipe(minifycss({specialComments:0}))
+        .pipe(minifycss({specialComments:0}))
         .pipe(gulp.dest(target.css_dest))               // where to put the file
         .pipe(browserSync.reload({stream:true, once: true}));
 });
