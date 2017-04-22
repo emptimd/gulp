@@ -2,9 +2,9 @@
 1. DEPENDENCIES
 *******************************************************************************/
  
-var gulp = require('gulp');                             // gulp core
+const gulp = require('gulp'),                           // gulp core
     less = require('gulp-less'),                        // less compiler
-    sass = require('gulp-sass'),
+    sass = require('gulp-sass'),                        // sass compiler
     uglify = require('gulp-uglify'),                    // uglifies the js
     rename = require("gulp-rename");                    // rename files
     concat = require('gulp-concat'),                    // concatinate js
@@ -15,11 +15,11 @@ var gulp = require('gulp');                             // gulp core
     spritesmith = require('gulp.spritesmith'),          // generate sprites
     stripDebug = require('gulp-strip-debug'),           // remove debug log
     cache = require('gulp-cache'),                      // cache gulp tasks
-    newer = require('gulp-newer');                      // check files for changes
-    var plumber = require('gulp-plumber');
-    var notify = require("gulp-notify");
-    var babel = require("gulp-babel");
-    var extractMediaQueries = require('gulp-extract-media-queries');
+    newer = require('gulp-newer'),                      // check files for changes
+    plumber = require('gulp-plumber'),
+    notify = require("gulp-notify"),
+    babel = require("gulp-babel"),
+    extractMediaQueries = require('gulp-extract-media-queries');
 
     
 /*******************************************************************************
@@ -29,9 +29,9 @@ var gulp = require('gulp');                             // gulp core
 var target = {
     less_src : 'less/main.less',                        // all less files
     sass_src : [
-    'sass/main.scss',
-    'sass/bootstrap.scss'
-    ]
+        'sass/main.scss',
+        'sass/bootstrap.scss'
+    ],
     css_dest : 'css',                                   // where to put minified css
     js_lint_src : [                                     // all js that should be linted
         'js/build/app.js',
@@ -60,10 +60,6 @@ var other = {                                           // other js files to be 
 }
 
 var currentSprite = 'payment';
-
-var plugins = [
-    postcssFlexbugsFixes
-  ];
  
 /*******************************************************************************
 3. LESS TASK
@@ -83,20 +79,9 @@ gulp.task('less', function() {
         .pipe(less())                                   // compile all less
 		.on('error', beep)
         .pipe(autoprefixer({                             // complete css with correct vendor prefixes
-        	// browsers: ['last 2 versions'],
-        	browsers: [
-	        'Chrome >= 35',
-	        'Firefox >= 38',
-	        'Edge >= 12',
-	        'Explorer >= 10',
-	        'iOS >= 8',
-	        'Safari >= 8',
-	        'Android 2.3',
-	        'Android >= 4',
-	        'Opera >= 12'
-      		]
+        	browsers: ['last 2 versions'],
         }))
-        // .pipe(minifycss({specialComments:0}))
+        .pipe(minifycss({specialComments:0}))
         .pipe(gulp.dest(target.css_dest))               // where to put the file
         .pipe(browserSync.reload({stream:true, once: true}));
 });
@@ -206,7 +191,7 @@ gulp.task('image-min', function() {
 gulp.task('sprite', function () {
   var spriteData = gulp.src('img/sprites/'+currentSprite+'/*.png').pipe(spritesmith({
     imgName: currentSprite+'.png',
-    cssName: currentSprite+'.less',
+    cssName: currentSprite+'.sass',
     engine: 'pngsmith',
     algorithm: 'binary-tree',
     cssTemplate: 'stylus.template.mustache',
@@ -225,15 +210,14 @@ gulp.task('sprite', function () {
 *******************************************************************************/
 
 gulp.task('watch', function () {
-    gulp.watch('less/**/*.less',['less']);
+    // gulp.watch('less/**/*.less',['less']);
     gulp.watch('sass/**/*.scss',['sass']);
     gulp.watch(target.js_concat_src, ['js-concat']);
     gulp.watch(["*.html",'*.php'], ['bs-reload']);
 });
 
-gulp.task('default', [/*'js-uglify', */'js-concat'/*, 'js-other'*/, 'less']);
-gulp.task('dev', ['js-concat', 'less', 'browser-sync', 'watch']);
-gulp.task('build', ['js-concat', 'less', 'browser-sync-proxy', 'watch']);
+gulp.task('default', [/*'js-uglify', */'js-concat'/*, 'js-other'*/, 'sass']);
+gulp.task('dev', ['js-concat', 'sass', 'browser-sync', 'watch']);
+gulp.task('build', ['js-concat', 'sass', 'browser-sync-proxy', 'watch']);
 gulp.task('images', ['image-min']);
 gulp.task('sprites', ['sprite']);
-gulp.task('wp', ['image-resize']);

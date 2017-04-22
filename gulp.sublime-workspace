@@ -1,0 +1,541 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"le",
+				"length"
+			],
+			[
+				"sa",
+				"sass/"
+			],
+			[
+				"cur",
+				"cur:p\tcursor:pointer"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 259.0,
+		"last_filter": "Package Control: ins",
+		"selected_items":
+		[
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/user/sites/gulpgit"
+	],
+	"file_history":
+	[
+		"/home/user/sites/gulpgit/js/common.js",
+		"/home/user/sites/gulpgit/js/landing-fc0b2067fa.js",
+		"/home/user/sites/gulpgit/js/_functions.js",
+		"/home/user/sites/gulpgit/js/collection.js",
+		"/home/user/PHP LIBRARIES",
+		"/home/user/php-info.txt",
+		"/home/user/LARAVEL 5 BEST BACKEND",
+		"/home/user/html",
+		"/home/user/card",
+		"/home/user/asd.csv",
+		"/home/user/1.txt",
+		"/home/user/sites/node-starter/views/home.pug",
+		"/home/user/sites/node-starter/app.js",
+		"/home/user/sites/node-starter/views/layout.pug",
+		"/home/user/sites/node-starter/Dockerfile",
+		"/home/user/sites/gulp/package.json",
+		"/home/user/sites/node-starter/public/css/main.scss",
+		"/home/user/sites/gulp/gulpfile.js",
+		"/home/user/sites/gulp/css/main.css",
+		"/home/user/sites/node-starter/public/js/main.js",
+		"/home/user/sites/linkquidator-master/vendor/coderockr/php-query/composer.json",
+		"/home/user/sites/linkquidator-master/vendor/coderockr/php-query/README.md",
+		"/home/user/Bogdan/laravel-artisan-commands",
+		"/etc/php/7.0/fpm/pool.d/www.conf",
+		"/home/user/sites/linkquidator-master/public/css/all.css.map",
+		"/home/user/sites/gulp/css/style.css",
+		"/home/user/sites/gulp/css/screen-and-webkit-min-device-pixel-ratio-0.css",
+		"/home/user/sites/gulp/sass/utilities/_spacing.scss",
+		"/home/user/sites/gulp/sass/_utilities.scss",
+		"/home/user/sites/gulp/sass/bootstrap.scss",
+		"/home/user/sites/gulp/sass/mixins/_grid-framework.scss",
+		"/home/user/sites/gulp/css/max-width-1199px.css",
+		"/home/user/sites/gulp/node_modules/gulp-uglify/node_modules/lodash/fp/allPass.js",
+		"/home/user/sites/gulp/stylesheets/_bootstrap.scss",
+		"/home/user/sites/gulp/stylesheets/bootstrap/_normalize.scss",
+		"/home/user/sites/gulp/css/bootstrap.css",
+		"/home/user/sites/gulp/css/max-width-767px.css",
+		"/home/user/sites/gulp/less/responsive-utilities.less",
+		"/home/user/sites/gulp/css/bootstrapless.css",
+		"/home/user/sites/gulp/stylesheets/_bootstrap-mincer.scss",
+		"/home/user/sites/gulp/stylesheets/_bootstrap-sprockets.scss",
+		"/home/user/sites/gulp/stylesheets/_bootstrap-compass.scss",
+		"/home/user/sites/gulp/css/max-width-991px.css",
+		"/home/user/sites/bootstrap-3.3.7/Gruntfile.js",
+		"/home/user/sites/bootstrap-3.3.7/grunt/configBridge.json",
+		"/home/user/sites/gulp/css/min-width-1200px.css",
+		"/home/user/sites/gulp/css/max-width-1200px.css",
+		"/home/user/sites/gulp/css/min-width-768px.css",
+		"/home/user/sites/gulp/css/min-width-992px.css",
+		"/home/user/sites/gulp/less/utilities.less",
+		"/home/user/sites/gulp/less/scaffolding.less",
+		"/home/user/sites/gulp/less/pager.less",
+		"/home/user/sites/gulp/less/code.less",
+		"/home/user/sites/gulp/less/type.less",
+		"/home/user/sites/bootstrap-3.3.7/grunt/bs-lessdoc-parser.js",
+		"/home/user/sites/test/frontend/web/assets/afb36297/jquery.js",
+		"/home/user/sites/gulp/sass/_grid.scss",
+		"/home/user/sites/gulp/sass/mixins/_grid.scss",
+		"/home/user/sites/gulpgit/.gitignore",
+		"/home/user/sites/gulp/sass/_mixins.scss",
+		"/home/user/Dropbox/Stata",
+		"/home/user/sites/gulp/sass/_variables.scss",
+		"/home/user/sites/gulp/sass/_reboot.scss",
+		"/home/user/sites/gulp/sass/utilities/_sizing.scss",
+		"/home/user/sites/gulp/sass/utilities/_text.scss",
+		"/home/user/sites/gulp/sass/utilities/_flex.scss",
+		"/home/user/sites/gulp/sass/utilities/_position.scss",
+		"/home/user/sites/gulp/sass/utilities/_display.scss",
+		"/home/user/sites/gulp/sass/utilities/_float.scss",
+		"/home/user/sites/gulp/sass/utilities/_clearfix.scss",
+		"/home/user/sites/gulp/sass/utilities/_borders.scss",
+		"/home/user/sites/gulp/sass/utilities/_background.scss",
+		"/home/user/sites/gulp/sass/utilities/_align.scss",
+		"/home/user/sites/gulp/sass/utilities/_screenreaders.scss",
+		"/home/user/sites/gulp/sass/_nav.scss",
+		"/home/user/sites/gulp/sass/_alert.scss",
+		"/home/user/sites/gulp/sass/_custom-forms.scss",
+		"/home/user/sites/gulp/sass/_custom.scss",
+		"/home/user/sites/gulp/sass/_code.scss",
+		"/home/user/Dropbox/new steam",
+		"/home/user/sites/linkquidator-master/storage/app/urlanalyzer/2017/03/15/CallbackResult-3885-09_04_47.json",
+		"/home/user/sites/linkquidator-master/storage/app/urlanalyzer/2017/03/15/CallbackResult-3877-23_29_38.json",
+		"/home/user/sites/linkquidator-master/storage/app/majestic/2017/02/23/GetBackLinkData-1339-09_40_01.json",
+		"/etc/hosts",
+		"/home/user/sites/linkquidator-master/.env",
+		"/home/user/Bogdan/chrome-tabs.sh",
+		"/home/user/sites/yii-application/backend/controllers/SiteController.php",
+		"/home/user/Bogdan/nginx yii",
+		"/home/user/Bogdan/payyer",
+		"/home/user/.laravel_aliases",
+		"/home/user/Dropbox/.dropbox",
+		"/var/log/nginx/linkquidator-error.log",
+		"/etc/nginx/sites-available/linkquidator",
+		"/home/user/Bogdan/bux",
+		"/home/user/sites/blog/app/Http/Controllers/Back/LanguageController.php",
+		"/etc/php/7.0/fpm/php.ini",
+		"/home/user/.zshrc",
+		"/home/user/Bogdan/Add Into Laravel",
+		"/home/user/LARAVEL PLUGINS",
+		"/home/user/sites/bootstrap4git/grunt/postcss.config.js",
+		"/home/user/Documents/Hello sir.",
+		"/home/user/Bogdan/supervisor",
+		"/etc/supervisor/conf.d/laravel-worker.conf",
+		"/home/user/Bogdan/scp",
+		"/home/user/Dropbox/address.txt",
+		"/home/user/Bogdan/Useful-commands",
+		"/home/user/Bogdan/The Payoneer card enables you to easily withdraw",
+		"/home/user/sites/linkquidator-master/storage/app/majestic/2017/03/05/GetBackLinkData-1365-09_48_10.json",
+		"/home/user/sites/linkquidator-master/storage/app/majestic/2017/03/09/GetBackLinkData-1272-21_38_58.json",
+		"/home/user/Downloads/disavow-stasva.com.txt",
+		"/home/user/.PhpStorm2016.2/phpstorm64.vmoptions",
+		"/home/user/sites/linkquidator-master/storage/app/majestic/2017/02/23/CallbackResult-1339-09_41_27.json",
+		"/home/user/Dropbox/todo.txt",
+		"/home/user/Dropbox/done.txt",
+		"/home/user/.cache/.fr-KSj03W/archiev/frontend/controllers/ApiController.php",
+		"/home/user/Dropbox/boot.txt",
+		"/home/user/Todo/todo.txt",
+		"/etc/php/7.0/fpm/php",
+		"/home/user/.zsh_history",
+		"/home/user/.zshrc.pre-oh-my-zsh",
+		"/etc/nginx/sites-available/yii",
+		"/home/user/.cache/.fr-3fxG96/nginx-sites/blog",
+		"/home/user/Bogdan/zshrc",
+		"/home/user/Bogdan/startup ",
+		"/home/user/sites/blog/.git/hooks/pre-commit",
+		"/home/user/tasks/24.1/Configurations2/accelerator/current.xml",
+		"/home/user/sites/blog/вв",
+		"/home/user/tasks/24.1/mimetype"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"var",
+			"image-resize",
+			"plumber",
+			"babel",
+			"extractMediaQueries",
+			"combineMq",
+			"gcmq",
+			"2",
+			"request",
+			"api/",
+			"sass_src",
+			"sas",
+			"lusca",
+			"flash",
+			"port",
+			"passport",
+			"passportConfig",
+			"Passport",
+			"passport",
+			"Passport",
+			"passport",
+			"mongo",
+			"bluebird",
+			"getScraping",
+			"http",
+			"cheerio",
+			"Cheerio",
+			"cheerio",
+			"passportConfig",
+			"compression",
+			"plugi",
+			"COmposer",
+			"href=\"",
+			"(min-width: 1200px)",
+			"992",
+			"991",
+			"768",
+			"1199px",
+			"max",
+			"991px",
+			"991",
+			"767",
+			"@media",
+			".col-xs-1, .col-xs-2,",
+			"@media",
+			"/imag",
+			"sass",
+			"navbar-toggle",
+			".navbar-toggler-icon",
+			"\"><a",
+			"<a",
+			"a",
+			"\"><a",
+			"<a",
+			"bg-faded",
+			"navbarSupportedContent",
+			":checkbox",
+			"select",
+			"body",
+			".container-fluid {",
+			".row {",
+			"  .row {\n",
+			".row {",
+			".col-1,",
+			".col-1",
+			"make-gutters",
+			".col-1,",
+			".col1,",
+			".col1",
+			"max-width: 575px",
+			".col-1,",
+			"make-grid-columns",
+			".col-1,",
+			".col-1,\n  .col-2,",
+			"max-width: 991px",
+			"@media (min-width: 768px)",
+			" @media (min-width: 768px)",
+			" {",
+			"  @media (min-width: 768px) ",
+			"@media (min-width: 768px)",
+			") ",
+			"(min-width: 768px)",
+			".mw-100",
+			"navbar",
+			"white",
+			" $white",
+			"$white",
+			"$body-bg",
+			"serif",
+			"$font-family-sans-serif",
+			"$font-family-base",
+			"Colors",
+			"sass",
+			"keepSpecialComments",
+			"less",
+			"shortColor",
+			"babel",
+			"http://lists.jabber.ru/pipermail/jabber-users/2002-April",
+			"http://adiumxtras.com/",
+			"http://adiumxtras.com/index.",
+			"http://adiumxtras.com/index.php?a=users&do=profile&user_id=54620",
+			"http://adiumxtras.com/index.php",
+			"http://adiumxtras.com/inde",
+			"http://adiumxtras.com/",
+			"http://adiumxtras.co",
+			"http://adiumxtras.com/",
+			"http://adiumxtras.com/index",
+			"http://adiumxtras.com/",
+			"http://adiumxtras.com/index.php",
+			"http://adiumxtras.com/",
+			"http://adiumxtras.com/index",
+			"http://adiumxtras.com/index.php?",
+			"http://adiumxtras.com/index.php?a=users&do=profile&user_id=54620",
+			"http://adiumxtras.com/",
+			"http://adiumxtras.com/index.php?a=users&do=profile&user_id=54620",
+			"http://adiumxtra",
+			"http://adiumxtras.com/index.php20a=users&do=profile&user_id=5462",
+			"text_html_ratio",
+			"text_html",
+			"http://seo-aspirant.ru/kak-prodavat-za-12-000-to-chto-stoit-3-000",
+			"text_html_ratio",
+			"urlanalizer",
+			"majestic",
+			"scp",
+			"zend",
+			"xdebu",
+			"mysql",
+			"/path/to/advanced/"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 40.0
+	},
+	"input":
+	{
+		"height": 54.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "gulp.sublime-project",
+	"replace":
+	{
+		"height": 76.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"api/scpug",
+				"node-starter/views/api/scraping.pug"
+			],
+			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"guflp",
+				"node_modules/gulp-uglify/node_modules/lodash/fp/allPass.js"
+			],
+			[
+				"style.scs",
+				"sass2/style.scss"
+			],
+			[
+				"utilities/spacing",
+				"sass/utilities/_spacing.scss"
+			],
+			[
+				"sass/",
+				"sass/_grid.scss"
+			],
+			[
+				"gu",
+				"~/sites/gulp/gulpfile.js"
+			],
+			[
+				"gufl",
+				"~/sites/gulp/gulpfile.js"
+			],
+			[
+				"use",
+				"~/Dropbox/Useful-commands"
+			],
+			[
+				"usda",
+				"~/Bogdan/Useful-commands"
+			],
+			[
+				"usef",
+				"~/Bogdan/Useful-commands"
+			],
+			[
+				"us",
+				"~/Bogdan/Useful-commands"
+			],
+			[
+				"aver",
+				"http://avertizare.starnet.md/?uid=39465CC2-4D95-49"
+			],
+			[
+				"chro",
+				"~/Bogdan/chrome-tabs.sh"
+			],
+			[
+				"pre",
+				"~/sites/blog/.git/hooks/pre-commit"
+			],
+			[
+				"sh",
+				"~/.zshrc"
+			],
+			[
+				"re",
+				"~/sites/blog/.git/hooks/pre-commit"
+			],
+			[
+				"",
+				"~/.zshrc"
+			],
+			[
+				"ore",
+				"~/sites/blog/.git/hooks/pre-commit"
+			],
+			[
+				"pa",
+				"~/Bogdan/payyer"
+			],
+			[
+				"yii",
+				"/etc/nginx/sites-available/yii"
+			],
+			[
+				"pay",
+				"~/Bogdan/payyer"
+			],
+			[
+				".l",
+				"~/.laravel_aliases"
+			],
+			[
+				".s",
+				"~/.zshrc"
+			],
+			[
+				"chr",
+				"~/Bogdan/chrome-tabs.sh"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 204.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
