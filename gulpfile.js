@@ -30,7 +30,7 @@ var target = {
     less_src : 'less/main.less',                        // all less files
     sass_src : [
         'sass/main.scss',
-        'sass/bootstrap.scss'
+        'sass/_bootstrap.scss'
     ],
     css_dest : 'css',                                   // where to put minified css
     js_lint_src : [                                     // all js that should be linted

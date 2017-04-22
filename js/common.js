@@ -1,182 +1,112 @@
 'use strict';
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _marked = [iterator].map(regeneratorRuntime.mark);
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Person = function () {
-	function Person(tasks) {
-		_classCallCheck(this, Person);
-
-		this.tasks = tasks;
-	}
-
-	_createClass(Person, [{
-		key: 'prepare',
-		value: function prepare() {
-			this.tasks.forEach(function (task) {
-				return console.log(task);
-			});
-		}
-	}]);
-
-	return Person;
-}();
-
-var VERSION = 1.11;
-
-$('body').prepend('<h1>' + VERSION + '</h1>');
-
-// new Person([123,55,77]).prepare();
-
-
-var names = ['Bogdan', 'Diman', 'Ioan'];
-
-names = names.map(function (k) {
-	return k + ' is cool';
+/*---CSRF TOKEN---*/
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
 });
 
-console.log(names);
+/**
+ * Get background color of elemet.
+ */
 
-function discount(cost) {
-	var discount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : .10;
+// $.fn.getHexBackgroundColor = function () {
+// 	let rgb = $(this).css('background-color');
+// 	if (!rgb) {
+// 			return '#FFFFFF'; //default color
+// 	}
+// 	let hex_rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
 
+// 	function hex(x) {
+// 			return ("0" + parseInt(x).toString(16)).slice(-2);
+// 	}
 
-	return cost - cost * discount;
+// 	if (hex_rgb) {
+// 			return "#" + hex(hex_rgb[1]) + hex(hex_rgb[2]) + hex(hex_rgb[3]);
+// 	} else {
+// 			return rgb; //ie8 returns background-color in hex format then it will make                 compatible, you can improve it checking if format is in hexadecimal
+// 	}
+// }
+
+/**
+ * Exemple of usage for bgc changing.
+ */
+// $.each($("#rebus > .container .guess i"), function (i, el) {
+// 	let $this = $(this);
+// 	setTimeout(function () {
+// 		let oldBGColor = $this.parent().getHexBackgroundColor();
+// 		let newBGColor = oldBGColor.replace(/[^,]+(?=\))/, '1');
+// 		$this.parent().css({backgroundColor: newBGColor});
+// 	}, 500 + ( i * 250 ));
+// 	setTimeout(function () {
+// 		$this.animate({opacity: 1}, 200);
+// 	}, 500 + ( i * 240 ));
+// });
+
+/**
+ * Fade button + scroll to top on click.
+ */
+// function window_scrool() {
+//  $(window).scroll(function () {
+//      if ($(this).scrollTop() > 70) {
+//          $('#bttop').fadeIn();
+//      } else {
+//          $('#bttop').fadeOut();
+//      }
+//  });
+//  $('#bttop').click(function () {
+//      $('body,html').animate({scrollTop: 0}, 800);
+//  });
+// }
+
+/**
+ * Google map
+ * @param {number} lat
+ * @param {number} lang
+ * @param {number} zoom
+ */
+function googlemap() {
+    var lat = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 10;
+    var lang = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 10;
+    var zoom = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 2;
+
+    var mapCanvas = document.getElementById('map');
+    var latlng = new google.maps.LatLng(lat, lang);
+    var settings = {
+        zoom: zoom,
+        center: latlng,
+        mapTypeControl: true,
+        mapTypeControlOptions: { style: google.maps.MapTypeControlStyle.DROPDOWN_MENU },
+        navigationControl: true,
+        navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL },
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(mapCanvas, settings);
 }
 
-function calcSum() {
-	for (var _len = arguments.length, numbers = Array(_len), _key = 0; _key < _len; _key++) {
-		numbers[_key] = arguments[_key];
-	}
+/*export default*/function submit(action, values) {
+    var method = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'POST';
 
-	return numbers.reduce(function (prev, next) {
-		return prev + next;
-	});
+    var form = $('<form/>', {
+        action: action,
+        method: method
+    });
+
+    // add csrf token
+    form.append($('<input/>', {
+        type: 'hidden',
+        name: '_token',
+        value: $('meta[name="csrf-token"]').attr('content')
+    }));
+
+    $.each(values, function () {
+        form.append($('<input/>', {
+            type: 'hidden',
+            name: this.name,
+            value: this.value
+        }));
+    });
+    form.appendTo('body').submit();
 }
-
-console.log(calcSum(1, 3, 5, 7));
-
-var msg = 'Problem with cookies';
-
-var template = '\n\t<div class=\'alert\'>\n\t\t<p> ' + msg + ' </p>\n\t</div>\n';
-
-$('body').prepend(template);
-
-console.log(template);
-
-function dest(_ref) {
-	var a = _ref.a,
-	    b = _ref.b;
-
-	console.log(a);
-}
-
-dest({ a: 3, b: 6 });
-
-var Person2 = function () {
-	function Person2(x, y) {
-		_classCallCheck(this, Person2);
-
-		this.x = x;
-		this.y = y;
-	}
-
-	_createClass(Person2, [{
-		key: 'name',
-		value: function name() {
-			return this.name;
-		}
-	}, {
-		key: 'sum',
-		get: function get() {
-			return this.x + this.y;
-		}
-
-		// set sum(name) {
-		// 	this.name=name;
-		// }
-
-	}], [{
-		key: 'name',
-		value: function name() {
-			return '234444';
-		}
-	}, {
-		key: 'className',
-		get: function get() {
-			return 'Person2';
-		}
-	}]);
-
-	return Person2;
-}();
-
-var obj2 = new Person2(10, 15);
-
-// obj2.name = 'Some name';
-
-console.log(obj2.sum);
-
-console.log(Person2.className);
-
-var TaskCollection = function () {
-	function TaskCollection(tasks) {
-		_classCallCheck(this, TaskCollection);
-
-		this.tasks = tasks;
-	}
-
-	_createClass(TaskCollection, [{
-		key: 'dump',
-		value: function dump() {
-			console.log(this.tasks);
-		}
-	}, {
-		key: 'firstTask',
-		get: function get() {
-			return this.tasks[0];
-		}
-	}]);
-
-	return TaskCollection;
-}();
-
-var hhh = new TaskCollection(['Todo 1', 'Todo 2', 'Todo 3 you']);
-
-console.log(hhh.firstTask);
-
-// let phrase = ['hello Bogdan', 'i hope you are enjoying the blog posts', 'see you later!'];
-// let pi = 0;
-
-// alert(phrase.next());
-
-
-function iterator(name) {
-	return regeneratorRuntime.wrap(function iterator$(_context) {
-		while (1) {
-			switch (_context.prev = _context.next) {
-				case 0:
-					_context.next = 2;
-					return 'hello ' + name;
-
-				case 2:
-					_context.next = 4;
-					return 'i h 1you later11111!';
-
-				case 4:
-				case 'end':
-					return _context.stop();
-			}
-		}
-	}, _marked[0], this);
-}
-
-var iter = iterator('Bogdan');
-
-$('.inside').on('click', function () {
-	var $this = $(this);
-	$('body').append('\n\t\t<p>' + iter.next().value + '</p>\n\t');
-});
+console.log('wazzap');

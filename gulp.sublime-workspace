@@ -19,6 +19,80 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 2074,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gulpfile.js",
+			"settings":
+			{
+				"buffer_size": 9088,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "$test: #fff;\n\nbody {\n\tbackground-color: red;\n\tmargin-top: 50px;\n\n\tcolor: yellow;\n\tfont-size: 16px;\n\tcolor: $t;\n}\n",
+			"file": "sass/main.scss",
+			"file_size": 111,
+			"file_write_time": 131373259227355733,
+			"settings":
+			{
+				"buffer_size": 113,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "less/main.less",
+			"settings":
+			{
+				"buffer_size": 533,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/_functions.js",
+			"settings":
+			{
+				"buffer_size": 2729,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/common.js",
+			"settings":
+			{
+				"buffer_size": 3152,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/main.js",
+			"settings":
+			{
+				"buffer_size": 23,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/es2015.js",
+			"settings":
+			{
+				"buffer_size": 1817,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -27,10 +101,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 259.0,
-		"last_filter": "Package Control: ins",
+		"height": 354.0,
+		"last_filter": "Package Control: ",
 		"selected_items":
 		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
 			[
 				"Package Control: ins",
 				"Package Control: Install Package"
@@ -61,7 +139,19 @@
 	],
 	"file_history":
 	[
+		"/home/user/.config/sublime-text-3/Packages/User/comment.sublime-macro",
+		"/home/user/sites/gulpgit/css/bootstrap.css",
+		"/home/user/sites/gulpgit/sass/bootstrap/_buttons.scss",
+		"/home/user/sites/gulpgit/sass/_bootstrap.scss",
 		"/home/user/sites/gulpgit/js/common.js",
+		"/home/user/sites/linkquidator-master/resources/assets/js/theme/test.js",
+		"/home/user/sites/linkquidator-master/resources/assets/js/theme/common-scripts.js",
+		"/home/user/.cache/.fr-N5bgMm/bootstrap-sass-3.3.7/assets/stylesheets/_bootstrap-mincer.scss",
+		"/home/user/sites/gulp/sass2/_mixins.scss",
+		"/home/user/sites/gulp/sass2/main.scss",
+		"/home/user/.cache/.fr-SSrgwb/bootstrap-sass-3.3.7/assets/stylesheets/_bootstrap-compass.scss",
+		"/home/user/.cache/.fr-weTN6G/bootstrap-sass-3.3.7/assets/stylesheets/_bootstrap-sprockets.scss",
+		"/home/user/sites/gulpgit/sass/bootstrap.scss",
 		"/home/user/sites/gulpgit/js/landing-fc0b2067fa.js",
 		"/home/user/sites/gulpgit/js/_functions.js",
 		"/home/user/sites/gulpgit/js/collection.js",
@@ -176,19 +266,7 @@
 		"/home/user/Dropbox/todo.txt",
 		"/home/user/Dropbox/done.txt",
 		"/home/user/.cache/.fr-KSj03W/archiev/frontend/controllers/ApiController.php",
-		"/home/user/Dropbox/boot.txt",
-		"/home/user/Todo/todo.txt",
-		"/etc/php/7.0/fpm/php",
-		"/home/user/.zsh_history",
-		"/home/user/.zshrc.pre-oh-my-zsh",
-		"/etc/nginx/sites-available/yii",
-		"/home/user/.cache/.fr-3fxG96/nginx-sites/blog",
-		"/home/user/Bogdan/zshrc",
-		"/home/user/Bogdan/startup ",
-		"/home/user/sites/blog/.git/hooks/pre-commit",
-		"/home/user/tasks/24.1/Configurations2/accelerator/current.xml",
-		"/home/user/sites/blog/вв",
-		"/home/user/tasks/24.1/mimetype"
+		"/home/user/Dropbox/boot.txt"
 	],
 	"find":
 	{
@@ -351,8 +429,503 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2074,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2012,
+								2012
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1330.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "gulpfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9088,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1781,
+								1781
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 612.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sass/main.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 113,
+						"regions":
+						{
+							"gutter_color_0":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#fff.png",
+								"regions":
+								[
+									[
+										0,
+										12
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_21":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										21,
+										44
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_5":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										21,
+										43
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_51":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/yellow.png",
+								"regions":
+								[
+									[
+										65,
+										80
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_65":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/yellow.png",
+								"regions":
+								[
+									[
+										65,
+										80
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_7":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										21,
+										44
+									]
+								],
+								"scope": "gutter_color"
+							}
+						},
+						"selection":
+						[
+							[
+								109,
+								109
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "less/main.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 533,
+						"regions":
+						{
+							"gutter_color_169":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#fff.png",
+								"regions":
+								[
+									[
+										58,
+										82
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_20":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/yellow.png",
+								"regions":
+								[
+									[
+										7,
+										33
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_262":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#333.png",
+								"regions":
+								[
+									[
+										262,
+										287
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_34":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#ccc.png",
+								"regions":
+								[
+									[
+										34,
+										47
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_373":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#333.png",
+								"regions":
+								[
+									[
+										262,
+										287
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_431":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#474.png",
+								"regions":
+								[
+									[
+										431,
+										457
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_47":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#ccc.png",
+								"regions":
+								[
+									[
+										34,
+										47
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_498":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										498,
+										510
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_542":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#474.png",
+								"regions":
+								[
+									[
+										431,
+										457
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_58":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#fff.png",
+								"regions":
+								[
+									[
+										58,
+										82
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_609":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										498,
+										510
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_69":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/blue.png",
+								"regions":
+								[
+									[
+										48,
+										48
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_7":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/yellow.png",
+								"regions":
+								[
+									[
+										7,
+										33
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_94":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/white.png",
+								"regions":
+								[
+									[
+										48,
+										48
+									]
+								],
+								"scope": "gutter_color"
+							}
+						},
+						"selection":
+						[
+							[
+								48,
+								48
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/_functions.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2729,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1600,
+								1600
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1977.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "js/common.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3152,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3068,
+								3068
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 23,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								23,
+								23
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "js/es2015.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1817,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								63,
+								63
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -404,6 +977,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"comjs",
+				"js/common.js"
+			],
+			[
+				"mainjs",
+				"js/main.js"
+			],
+			[
+				"in",
+				"index.html"
+			],
 			[
 				"api/scpug",
 				"node-starter/views/api/scraping.pug"
@@ -532,7 +1117,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 204.0,
 	"status_bar_visible": true,
 	"template_settings":

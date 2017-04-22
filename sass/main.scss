@@ -1,0 +1,12 @@
+$test: yellow;
+$fz: 25px;
+
+body {
+	background-color: red;
+	margin-top: 50px;
+	font-size: $fz;
+	color: $test;
+}
+.custom-select {
+	width: 300px;
+}

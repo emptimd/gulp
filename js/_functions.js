@@ -64,11 +64,7 @@ $.ajaxSetup({
  * @param {number} lang
  * @param {number} zoom
  */
-function googlemap(lat=15,lang,zoom) {
-	alert(lat);
-	if (typeof lat === 'undefined') lat=10;
-	if (typeof lang === 'undefined') lang=10;
-	if (typeof zoom === 'undefined') zoom=2;
+function googlemap(lat=10,lang=10,zoom=2) {
 	let mapCanvas = document.getElementById('map');
 	let latlng = new google.maps.LatLng(lat, lang);
 	let settings = {
@@ -84,7 +80,7 @@ function googlemap(lat=15,lang,zoom) {
 }
 
 
-/*export default function */submit(action, values, method='POST') {
+/*export default*/ function submit(action, values, method='POST') {
     var form = $('<form/>', {
         action: action,
         method: method
