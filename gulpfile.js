@@ -19,10 +19,7 @@ var gulp = require('gulp');                             // gulp core
     var plumber = require('gulp-plumber');
     var notify = require("gulp-notify");
     var babel = require("gulp-babel");
-    var postcss = require('gulp-postcss');
-    var postcssFlexbugsFixes = require('postcss-flexbugs-fixes');
-    var gcmq = require('gulp-group-css-media-queries');
-    var combineMq = require('gulp-combine-mq');
+    var extractMediaQueries = require('gulp-extract-media-queries');
 
     
 /*******************************************************************************
@@ -31,7 +28,10 @@ var gulp = require('gulp');                             // gulp core
  
 var target = {
     less_src : 'less/main.less',                        // all less files
-    sass_src : 'sass/bootstrap.scss',
+    sass_src : [
+    'sass/main.scss',
+    'sass/bootstrap.scss'
+    ]
     css_dest : 'css',                                   // where to put minified css
     js_lint_src : [                                     // all js that should be linted
         'js/build/app.js',
@@ -112,22 +112,10 @@ gulp.task('sass', function() {
 		.on('error', beep)
         .pipe(autoprefixer({
         	browsers: ['last 2 versions'],
-        //     browsers: [
-	       //  'Chrome >= 35',
-	       //  'Firefox >= 38',
-	       //  'Edge >= 12',
-	       //  'Explorer >= 10',
-	       //  'iOS >= 8',
-	       //  'Safari >= 8',
-	       //  'Android 2.3',
-	       //  'Android >= 4',
-	       //  'Opera >= 12'
-      		// ],
             cascade: false
         }))
-        .pipe(postcss(plugins))
-        .pipe(gcmq())
-        // .pipe(minifycss({specialComments:0}))
+        .pipe(extractMediaQueries())
+        .pipe(minifycss({specialComments:0}))
         .pipe(gulp.dest(target.css_dest))               // where to put the file
         .pipe(browserSync.reload({stream:true, once: true}));
 });
