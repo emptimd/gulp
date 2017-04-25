@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"$",
+				"$fz"
+			],
+			[
+				"cm",
+				"cm\t/* ${0}${child} */"
+			],
+			[
+				"cbm",
+				"cmba\tcmba"
+			],
+			[
+				"custom",
+				"custom-select\t(index.html)"
+			],
+			[
+				"su",
+				"submit\t(_functions.js)"
+			],
+			[
 				"le",
 				"length"
 			],
@@ -32,19 +52,33 @@
 			"file": "gulpfile.js",
 			"settings":
 			{
-				"buffer_size": 9088,
+				"buffer_size": 9087,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "$test: #fff;\n\nbody {\n\tbackground-color: red;\n\tmargin-top: 50px;\n\n\tcolor: yellow;\n\tfont-size: 16px;\n\tcolor: $t;\n}\n",
-			"file": "sass/main.scss",
-			"file_size": 111,
-			"file_write_time": 131373259227355733,
+			"file": "/home/user/1.txt",
 			"settings":
 			{
-				"buffer_size": 113,
+				"buffer_size": 553,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/bootstrap.scss",
+			"settings":
+			{
+				"buffer_size": 1337,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/main.scss",
+			"settings":
+			{
+				"buffer_size": 145,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -135,12 +169,16 @@
 	},
 	"expanded_folders":
 	[
-		"/home/user/sites/gulpgit"
+		"/home/user/sites/gulpgit",
+		"/home/user/sites/gulpgit/sass"
 	],
 	"file_history":
 	[
-		"/home/user/.config/sublime-text-3/Packages/User/comment.sublime-macro",
 		"/home/user/sites/gulpgit/css/bootstrap.css",
+		"/home/user/sites/gulpgit/css/main.css",
+		"/home/user/.config/sublime-text-3/Packages/User/All Autocomplete.sublime-settings",
+		"/home/user/.config/sublime-text-3/Packages/All Autocomplete/All Autocomplete.sublime-settings",
+		"/home/user/.config/sublime-text-3/Packages/User/comment.sublime-macro",
 		"/home/user/sites/gulpgit/sass/bootstrap/_buttons.scss",
 		"/home/user/sites/gulpgit/sass/_bootstrap.scss",
 		"/home/user/sites/gulpgit/js/common.js",
@@ -263,10 +301,7 @@
 		"/home/user/Downloads/disavow-stasva.com.txt",
 		"/home/user/.PhpStorm2016.2/phpstorm64.vmoptions",
 		"/home/user/sites/linkquidator-master/storage/app/majestic/2017/02/23/CallbackResult-1339-09_41_27.json",
-		"/home/user/Dropbox/todo.txt",
-		"/home/user/Dropbox/done.txt",
-		"/home/user/.cache/.fr-KSj03W/archiev/frontend/controllers/ApiController.php",
-		"/home/user/Dropbox/boot.txt"
+		"/home/user/Dropbox/todo.txt"
 	],
 	"find":
 	{
@@ -284,6 +319,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$test",
 			"var",
 			"image-resize",
 			"plumber",
@@ -410,8 +446,7 @@
 			"scp",
 			"zend",
 			"xdebu",
-			"mysql",
-			"/path/to/advanced/"
+			"mysql"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -445,8 +480,8 @@
 						"selection":
 						[
 							[
-								2012,
-								2012
+								1407,
+								1407
 							]
 						],
 						"settings":
@@ -456,10 +491,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1330.0,
+						"translation.y": 35.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -468,15 +503,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9088,
+						"buffer_size": 9087,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1781,
-								1781
+								4485,
+								4485
 							]
 						],
 						"settings":
@@ -486,30 +521,99 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": -0.0,
-						"translation.y": 612.0,
+						"translation.y": 3255.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
+					"file": "/home/user/1.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 553,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								494,
+								494
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 318.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sass/bootstrap.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1337,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								66,
+								66
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "sass/main.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 113,
+						"buffer_size": 145,
 						"regions":
 						{
 							"gutter_color_0":
 							{
 								"flags": 144,
-								"icon": "Cache/GutterColor/#fff.png",
+								"icon": "Cache/GutterColor/yellow.png",
 								"regions":
 								[
 									[
 										0,
-										12
+										14
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_171":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/tan.png",
+								"regions":
+								[
+									[
+										144,
+										144
 									]
 								],
 								"scope": "gutter_color"
@@ -521,8 +625,73 @@
 								"regions":
 								[
 									[
-										21,
-										44
+										34,
+										57
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_309":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/tan.png",
+								"regions":
+								[
+									[
+										144,
+										144
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_310":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/tan.png",
+								"regions":
+								[
+									[
+										144,
+										144
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_315":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/tan.png",
+								"regions":
+								[
+									[
+										144,
+										144
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_32":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										34,
+										57
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_34":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										34,
+										57
 									]
 								],
 								"scope": "gutter_color"
@@ -534,8 +703,8 @@
 								"regions":
 								[
 									[
-										21,
-										43
+										34,
+										56
 									]
 								],
 								"scope": "gutter_color"
@@ -547,8 +716,8 @@
 								"regions":
 								[
 									[
-										65,
-										80
+										77,
+										77
 									]
 								],
 								"scope": "gutter_color"
@@ -560,8 +729,8 @@
 								"regions":
 								[
 									[
-										65,
-										80
+										77,
+										77
 									]
 								],
 								"scope": "gutter_color"
@@ -573,8 +742,8 @@
 								"regions":
 								[
 									[
-										21,
-										44
+										34,
+										57
 									]
 								],
 								"scope": "gutter_color"
@@ -583,8 +752,8 @@
 						"selection":
 						[
 							[
-								109,
-								109
+								124,
+								124
 							]
 						],
 						"settings":
@@ -595,11 +764,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 5,
 					"file": "less/main.less",
 					"semi_transient": false,
 					"settings":
@@ -806,11 +975,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 6,
 					"file": "js/_functions.js",
 					"semi_transient": false,
 					"settings":
@@ -835,11 +1004,11 @@
 						"translation.y": 1977.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "js/common.js",
 					"semi_transient": false,
 					"settings":
@@ -865,11 +1034,11 @@
 						"translation.y": 3360.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 8,
 					"file": "js/main.js",
 					"semi_transient": false,
 					"settings":
@@ -894,11 +1063,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 9,
 					"file": "js/es2015.js",
 					"semi_transient": false,
 					"settings":
@@ -923,7 +1092,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -1117,7 +1286,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 204.0,
 	"status_bar_visible": true,
 	"template_settings":
