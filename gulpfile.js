@@ -99,7 +99,7 @@ gulp.task('sass', function() {
         	browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(extractMediaQueries())
+        // .pipe(extractMediaQueries())
         .pipe(minifycss({specialComments:0}))
         .pipe(gulp.dest(target.css_dest))               // where to put the file
         .pipe(browserSync.reload({stream:true, once: true}));

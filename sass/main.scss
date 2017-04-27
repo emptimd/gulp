@@ -1,12 +1,41 @@
-$test: yellow;
-$fz: 25px;
+$gray-base: #828181;
+$green-base: #54d154;
+$green-darker1: #3eba3e;
+$green-darker2: #2b9b2b;
+$green-dark: #207b20;
+
+
+$body-bg:               #fff !default;
+$text-color:            $gray-base !default;
+// $link-color:            $brand-primary !default;
+// $link-hover-color:      darken($link-color, 15%) !default;
+
 
 body {
-	background-color: red;
-	margin-top: 50px;
-	font-size: $fz;
-	color: $test;
+	// font-size: $fz;
+	color: $gray-base;
 }
 .custom-select {
 	width: 300px;
+}
+
+.h1 {
+	font-size: 55px;
+	color: #fff;
+}
+
+.h2 {
+	font-size: 24px;
+}
+
+.h3 {
+	font-size: 20px;
+	font-weight: 300;
+}
+
+.h4 {
+	font-family: OpenSans;
+	font-size: 16px;
+	font-weight: 300;
+	color: $green-darker2;
 }
