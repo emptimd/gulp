@@ -46,7 +46,7 @@ var target = {
         'js/main.js'
     ],
     js_dest : 'js',                                     // where to put minified js
-    img : 'img/**/*'                                    // src to images
+    img : 'images/**/*'                                    // src to images
 };
 var other = {                                           // other js files to be concatinated and minified
     carusel: [
@@ -180,7 +180,7 @@ gulp.task('bs-reload', function () {
 gulp.task('image-min', function() {
     gulp.src(target.img)                                // get the files
         .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-        .pipe(gulp.dest('img/'))                       // where to put the files
+        .pipe(gulp.dest('images/'))                       // where to put the files
 	.pipe(notify({ message: 'Images task complete',onLast: true }));
 });
 

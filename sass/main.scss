@@ -1,12 +1,12 @@
 $gray-base: #828181;
-// $green-base: #54d154;
-// $green-darker1: #3eba3e;
-// $green-darker2: #2b9b2b;
-// $green-dark: #207b20;
+$green-base: #54d154;
+$green-darker1: #3eba3e;
+$green-darker2: #2b9b2b;
+$green-dark: #207b20;
 
 
-$body-bg:               #fff !default;
-$text-color:            $gray-base !default;
+// $body-bg:               #fff !default;
+// $text-color:            $gray-base !default;
 // $link-color:            $brand-primary !default;
 // $link-hover-color:      darken($link-color, 15%) !default;
 
@@ -16,9 +16,54 @@ body {
 	font-family: OpenSans, sans-serif;
 	font-size: 16px;
 	color: $gray-base;
-
+	// font-family: OpenSans;
 }
 
+.header {
+	background-image: url('/images/background.jpg');
+	background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+	border: none;
+}
+
+.navbar-brand {
+    position: absolute;
+    margin: 20px auto !important;
+    right: 0;
+    left: 0;
+    width: 62px;
+    height: 16px;
+    padding: 0;
+}
+.navbar-toggle {
+    z-index:3;
+}
+
+.nav {
+	a {
+		color: #fff;
+		&:after {
+			display:block;
+			content:attr(data-text);
+			font-weight:bold;
+			height:1px;
+			color:transparent;
+			overflow:hidden;
+			visibility:hidden;
+		}
+	}
+
+	li {
+		&.active > a, >a:hover {
+			font-weight: bold;
+			background-color: inherit;
+		}
+	}
+}
 
 .h1 {
 	font-size: 55px;
@@ -34,5 +79,8 @@ body {
 }
 
 .h4 {
+
+	font-size: 16px;
+	font-weight: 300;
 	color: $green-darker2;
 }
