@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"sa",
+				"sans-serif\t(_variables.scss)"
+			],
+			[
 				"ca",
 				"carusel"
 			],
@@ -32,10 +36,6 @@
 				"length"
 			],
 			[
-				"sa",
-				"sass/"
-			],
-			[
 				"cur",
 				"cur:p\tcursor:pointer"
 			]
@@ -47,7 +47,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 1683,
+				"buffer_size": 1885,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -56,18 +56,9 @@
 			"file": "sass/main.scss",
 			"settings":
 			{
-				"buffer_size": 607,
+				"buffer_size": 567,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "'use strict';\n\nfunction rand(min, max) {\n    return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nconsole.time('filling')\n\nvar m = new Map();\n// fill array with random keys, 3chars len each with 0..255 char code\nvar mlen = (256 * 256 * 256) / 16; // size of array, part of possble amount of keys to test key missing\nfor (var i = mlen; i > 0; i--) {\n    m.set(String.fromCharCode(rand(0, 255), rand(0, 255), rand(0, 255)), true);\n}\n\nconsole.timeEnd('filling')\n\nconsole.time('counting')\n// count miss\nvar missed = 0;\nvar missed2 = 0;\nfor (var a = 0; a < 255; a++) {\n    for (var b = 0; b < 255; b++) {\n        for (var c = 0; c < 255; c++) {\n            if (!m.get(String.fromCharCode(a, b, c))) {\n                if (rand(0, 2) % 2 === 0)\n                    missed++;\n                else\n                    missed2++;\n            }\n        }\n    }\n}\nconsole.timeEnd('counting')\n\n//console.log(`\\n${missed}; ${missed2}; `);\nconsole.log('\\n' + missed + '; ' + missed2 + ';'); // for node v0.12.7",
-			"settings":
-			{
-				"buffer_size": 1003,
-				"line_ending": "Unix",
-				"name": "'use strict';"
 			}
 		},
 		{
@@ -149,6 +140,7 @@
 	],
 	"file_history":
 	[
+		"/home/user/Documents/map.js",
 		"/home/user/sites/gulp/sass/bootstrap.scss",
 		"/home/user/.config/sublime-text-3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
 		"/home/user/sites/gulp/js/_functions.js",
@@ -275,8 +267,7 @@
 		"/etc/supervisor/conf.d/laravel-worker.conf",
 		"/home/user/Bogdan/scp",
 		"/home/user/Dropbox/address.txt",
-		"/home/user/Bogdan/Useful-commands",
-		"/home/user/Bogdan/The Payoneer card enables you to easily withdraw"
+		"/home/user/Bogdan/Useful-commands"
 	],
 	"find":
 	{
@@ -439,7 +430,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -448,15 +439,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1683,
+						"buffer_size": 1885,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1260,
-								1260
+								1419,
+								1419
 							]
 						],
 						"settings":
@@ -466,10 +457,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 264.0,
+						"translation.y": 398.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -478,7 +469,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 607,
+						"buffer_size": 567,
 						"regions":
 						{
 							"gutter_color_0":
@@ -494,6 +485,19 @@
 								],
 								"scope": "gutter_color"
 							},
+							"gutter_color_102":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#207b20.png",
+								"regions":
+								[
+									[
+										102,
+										126
+									]
+								],
+								"scope": "gutter_color"
+							},
 							"gutter_color_117":
 							{
 								"flags": 144,
@@ -501,8 +505,8 @@
 								"regions":
 								[
 									[
-										117,
-										155
+										129,
+										167
 									]
 								],
 								"scope": "gutter_color"
@@ -514,8 +518,21 @@
 								"regions":
 								[
 									[
-										117,
-										155
+										129,
+										167
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_129":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#fff.png",
+								"regions":
+								[
+									[
+										129,
+										167
 									]
 								],
 								"scope": "gutter_color"
@@ -527,8 +544,8 @@
 								"regions":
 								[
 									[
-										117,
-										154
+										129,
+										166
 									]
 								],
 								"scope": "gutter_color"
@@ -540,8 +557,8 @@
 								"regions":
 								[
 									[
-										117,
-										155
+										129,
+										167
 									]
 								],
 								"scope": "gutter_color"
@@ -553,8 +570,8 @@
 								"regions":
 								[
 									[
-										607,
-										607
+										567,
+										567
 									]
 								],
 								"scope": "gutter_color"
@@ -567,7 +584,7 @@
 								[
 									[
 										21,
-										42
+										45
 									]
 								],
 								"scope": "gutter_color"
@@ -579,8 +596,8 @@
 								"regions":
 								[
 									[
-										324,
-										324
+										415,
+										415
 									]
 								],
 								"scope": "gutter_color"
@@ -592,8 +609,8 @@
 								"regions":
 								[
 									[
-										324,
-										324
+										415,
+										415
 									]
 								],
 								"scope": "gutter_color"
@@ -605,21 +622,21 @@
 								"regions":
 								[
 									[
-										324,
-										324
+										415,
+										415
 									]
 								],
 								"scope": "gutter_color"
 							},
-							"gutter_color_388":
+							"gutter_color_336":
 							{
 								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
+								"icon": "Cache/GutterColor/#fff.png",
 								"regions":
 								[
 									[
-										324,
-										324
+										336,
+										360
 									]
 								],
 								"scope": "gutter_color"
@@ -631,8 +648,8 @@
 								"regions":
 								[
 									[
-										324,
-										324
+										415,
+										415
 									]
 								],
 								"scope": "gutter_color"
@@ -644,8 +661,8 @@
 								"regions":
 								[
 									[
-										324,
-										324
+										415,
+										415
 									]
 								],
 								"scope": "gutter_color"
@@ -657,8 +674,8 @@
 								"regions":
 								[
 									[
-										425,
-										438
+										464,
+										477
 									]
 								],
 								"scope": "gutter_color"
@@ -670,34 +687,60 @@
 								"regions":
 								[
 									[
-										43,
-										67
+										49,
+										73
 									]
 								],
 								"scope": "gutter_color"
 							},
-							"gutter_color_462":
+							"gutter_color_430":
 							{
 								"flags": 144,
 								"icon": "Cache/GutterColor/#fff.png",
 								"regions":
 								[
 									[
-										425,
-										438
+										464,
+										477
 									]
 								],
 								"scope": "gutter_color"
 							},
-							"gutter_color_474":
+							"gutter_color_46":
 							{
 								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
+								"icon": "Cache/GutterColor/#3eba3e.png",
 								"regions":
 								[
 									[
-										324,
-										324
+										46,
+										73
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_464":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#fff.png",
+								"regions":
+								[
+									[
+										464,
+										477
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_486":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#fff.png",
+								"regions":
+								[
+									[
+										464,
+										477
 									]
 								],
 								"scope": "gutter_color"
@@ -709,8 +752,21 @@
 								"regions":
 								[
 									[
-										324,
-										324
+										415,
+										415
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_498":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#fff.png",
+								"regions":
+								[
+									[
+										464,
+										477
 									]
 								],
 								"scope": "gutter_color"
@@ -722,8 +778,8 @@
 								"regions":
 								[
 									[
-										324,
-										324
+										415,
+										415
 									]
 								],
 								"scope": "gutter_color"
@@ -735,8 +791,8 @@
 								"regions":
 								[
 									[
-										324,
-										324
+										415,
+										415
 									]
 								],
 								"scope": "gutter_color"
@@ -748,8 +804,8 @@
 								"regions":
 								[
 									[
-										324,
-										324
+										415,
+										415
 									]
 								],
 								"scope": "gutter_color"
@@ -761,8 +817,8 @@
 								"regions":
 								[
 									[
-										117,
-										155
+										129,
+										167
 									]
 								],
 								"scope": "gutter_color"
@@ -774,8 +830,8 @@
 								"regions":
 								[
 									[
-										68,
-										92
+										77,
+										101
 									]
 								],
 								"scope": "gutter_color"
@@ -787,8 +843,8 @@
 								"regions":
 								[
 									[
-										324,
-										324
+										415,
+										415
 									]
 								],
 								"scope": "gutter_color"
@@ -800,8 +856,21 @@
 								"regions":
 								[
 									[
-										117,
-										155
+										129,
+										167
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_74":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#2b9b2b.png",
+								"regions":
+								[
+									[
+										74,
+										101
 									]
 								],
 								"scope": "gutter_color"
@@ -813,8 +882,8 @@
 								"regions":
 								[
 									[
-										117,
-										155
+										129,
+										167
 									]
 								],
 								"scope": "gutter_color"
@@ -826,8 +895,8 @@
 								"regions":
 								[
 									[
-										93,
-										114
+										105,
+										126
 									]
 								],
 								"scope": "gutter_color"
@@ -839,8 +908,8 @@
 								"regions":
 								[
 									[
-										93,
-										114
+										105,
+										126
 									]
 								],
 								"scope": "gutter_color"
@@ -849,16 +918,19 @@
 						"selection":
 						[
 							[
-								323,
-								323
+								439,
+								439
 							]
 						],
 						"settings":
 						{
+							"rulers":
+							[
+							],
 							"syntax": "Packages/SCSS/SCSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 66.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -866,37 +938,6 @@
 				},
 				{
 					"buffer": 2,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1003,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1003,
-								1003
-							]
-						],
-						"settings":
-						{
-							"auto_name": "'use strict';",
-							"default_dir": "/home/user/sites/gulp",
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 148.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "sass/bootstrap/_variables.scss",
 					"semi_transient": false,
 					"settings":
@@ -2359,7 +2400,7 @@
 						{
 							"syntax": "Packages/SCSS/SCSS.tmLanguage"
 						},
-						"translation.x": -0.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -2367,7 +2408,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "gulpfile.js",
 					"semi_transient": false,
 					"settings":
@@ -2390,14 +2431,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1782.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "package.json",
 					"semi_transient": true,
 					"settings":
@@ -2420,7 +2461,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 132.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -2478,6 +2519,10 @@
 		"selected_items":
 		[
 			[
+				"in",
+				"index.html"
+			],
+			[
 				"boot",
 				"sass/bootstrap.scss"
 			],
@@ -2488,10 +2533,6 @@
 			[
 				"mainjs",
 				"js/main.js"
-			],
-			[
-				"in",
-				"index.html"
 			],
 			[
 				"api/scpug",
@@ -2621,7 +2662,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 204.0,
 	"status_bar_visible": true,
 	"template_settings":
