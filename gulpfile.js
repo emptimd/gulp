@@ -158,7 +158,8 @@ gulp.task('browser-sync', function() {
     browserSync.init(null, {        // files to inject
         server: {
             baseDir: "./"
-        }
+        },
+        notify: false,
     });
 });
 
