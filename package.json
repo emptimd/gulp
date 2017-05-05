@@ -30,7 +30,7 @@
     "gulp-rev": "latest",
     "gulp-rollup": "^2.3.0",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "latest",
+    "gulp-sourcemaps": "^2.6.0",
     "gulp-strip-debug": "latest",
     "gulp-uglify": "latest",
     "gulp-util": "latest",

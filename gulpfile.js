@@ -19,7 +19,8 @@ const gulp = require('gulp'),                           // gulp core
     plumber = require('gulp-plumber'),
     notify = require("gulp-notify"),
     babel = require("gulp-babel"),
-    extractMediaQueries = require('gulp-extract-media-queries');
+    extractMediaQueries = require('gulp-extract-media-queries'),
+    sourcemaps = require('gulp-sourcemaps');
 
     
 /*******************************************************************************
@@ -93,6 +94,7 @@ gulp.task('sass', function() {
 		title: 'Sass',
 		message: "<%= error.message %>"
 		})}))
+        .pipe(sourcemaps.init())
         .pipe(sass())                                   // compile all less
 		.on('error', beep)
         .pipe(autoprefixer({
@@ -101,6 +103,7 @@ gulp.task('sass', function() {
         }))
         // .pipe(extractMediaQueries())
         .pipe(minifycss({specialComments:0}))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(target.css_dest))               // where to put the file
         .pipe(browserSync.reload({stream:true, once: true}));
 });
