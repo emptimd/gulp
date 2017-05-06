@@ -6,3 +6,5 @@ Homestead.json
 .idea/
 .phpstorm.meta.php
 _ide_helper.php
+*.sublime-workspace
+*.sublime-project
