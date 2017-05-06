@@ -36,7 +36,16 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 10269,
+				"buffer_size": 10062,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/user/.config/sublime-text-3/Packages/User/Emmet.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 2054,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -603,7 +612,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -612,15 +621,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10269,
+						"buffer_size": 10062,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1358,
-								1358
+								1487,
+								1487
 							]
 						],
 						"settings":
@@ -631,10 +640,39 @@
 							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 446.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/user/.config/sublime-text-3/Packages/User/Emmet.sublime-settings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2054,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1949,
+								1949
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 927.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
