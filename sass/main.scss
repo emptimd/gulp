@@ -1,16 +1,13 @@
-$gray-base: #828181;
-$green-base: #54d154;
-$green-darker1: #3eba3e;
-$green-darker2: #2b9b2b;
-$green-dark: #207b20;
+@import "_variables";
 
 
 body {
 	background-color: #fff;
-	font-family: OpenSans, sans-serif;
+	// background-color: red;
+	font-family: OpenSans, sans-serif;//Open Sans
 	font-size: 16px;
 	line-height: 1.75;
-	color: $gray-base;
+	color: $color;
 	// font-family: OpenSans;
 }
 
@@ -24,13 +21,30 @@ body {
 }
 
 .h3 {
-	font-size: 20px;
+	font-size: 21px;
+	// font-weight: 400;
 }
 
 .h4 {
 	font-size: 16px;
 	font-weight: 300;
 	color: $green-darker2;
+	margin-top: 20px;
+}
+
+section .h3 {
+	position: relative;
+	&:after {
+		content: "";
+		width: 43px;
+		height: 2px;
+		background-color: $color;
+		position: absolute;
+		bottom: -10px;
+		right: 0;
+		left: 0;
+		margin: auto;
+	}
 }
 
 .header {
@@ -149,15 +163,15 @@ body {
 	height: 14px;
 	color: #111;
 	right: 9px;
-	bottom: 15px;
-	top: -4px !important;
+	// bottom: 15px;
+	top: 5px !important;
 }
 
 .header-main-wrap {
 	text-align: center;
 }
 
-.work {
+button.work {
 	width: 208px;
 	height: 47px;
 	background-color: $green-base;
@@ -186,6 +200,7 @@ body {
 	border: 0;
 	margin-top: 215px;
 	margin-bottom: 12px;
+	outline: 0;
 	&:hover {
 		background-color: #fff;
 	}
@@ -196,4 +211,129 @@ body {
 	}
 }
 
+/*-------------------------------------------------*/
+/* =  About
+/*-------------------------------------------------*/
 
+section.about {
+	.h3 {
+		margin-top: 40px;
+	}
+
+	.h4 {
+		color: #b7b3b3;
+	}
+
+	.about-block {
+		margin-top: 60px;
+	}
+
+	.title {
+		font-size: 24px;
+		margin-top: 25px;
+		margin-bottom: 15px;
+	}
+
+	.content {
+		font-size: 15px;
+	}
+
+	.more {
+		width: 120px;
+		height: 30px;
+		margin-top: 21px;
+		border-radius: 15px;
+		background-color: $green-base;
+		display: inline-block;
+		text-align: center;
+		font-weight: 700;
+		line-height: 30px;
+		color: #fff;
+		font-size: 15px;
+		&:hover {
+			text-decoration: none;
+			background-color: $green-darker1;
+		}
+	}
+}
+
+/*-------------------------------------------------*/
+/* =  Section Work
+/*-------------------------------------------------*/
+
+section.work {
+	margin-top: 73px;
+	background-color: $green-base;
+	padding-top: 40px;
+	.h3 {
+		color: $green-dark;
+		&:after {
+			background-color: $green-dark;
+		}
+	}
+
+	.h4 {
+		color: $green-darker2;
+	}
+
+	.more {
+		margin-top: 27px; //56-29
+		margin-bottom: 53px;
+		display: inline-block;
+		text-decoration: none;
+		color: #fff;
+		font-size: 18px;
+		border-radius: 20px;
+		background-color: $green-darker2;
+		width: 186px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+	}
+}
+
+.filter-wrap {
+	margin-top: 56px;
+	margin-bottom: 58px;
+	// border-radius: 20px;
+	// border: 1px solid $green-darker2;
+	display: inline-flex;
+	.filter-item {
+		text-decoration: none;
+		padding: 8px 20px;
+		font-size: 15px;
+		cursor: pointer;
+		&:nth-of-type(1) {
+			border: 1px solid $green-darker2;
+			border-radius: 20px 0 0 20px;
+		}
+		&:nth-of-type(2) {
+			border-top: 1px solid $green-darker2;
+			border-bottom: 1px solid $green-darker2;
+			border-right: 1px solid $green-darker2;
+		}
+		&:nth-of-type(3) {
+			border-top: 1px solid $green-darker2;
+			border-bottom: 1px solid $green-darker2;
+			border-right: 1px solid $green-darker2;
+			border-radius: 0 20px 20px 0;
+		}
+		&:not(:last-of-type) {
+			border-right: 1px solid $green-darker2;
+		}
+
+		&:not(.active) {
+			color: $green-darker2;
+			background-color: #fff;
+		}
+
+		&.active, &:hover {
+			color: #fff;
+			background-color: $green-darker2;
+		}
+	}
+}
+
+.work-item {
+	margin-bottom: 29px;
+}

@@ -22,6 +22,8 @@ const gulp = require('gulp'),                           // gulp core
     extractMediaQueries = require('gulp-extract-media-queries'),
     sourcemaps = require('gulp-sourcemaps');
 
+    //@TODO insert sass without page reload. Close browersyng connection when stoping/starting gulp dev.
+
     
 /*******************************************************************************
 2. FILE DESTINATIONS (RELATIVE TO ASSSETS FOLDER)
