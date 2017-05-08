@@ -109,7 +109,4 @@ function googlemap() {
     });
     form.appendTo('body').submit();
 }
-console.log('wazzap');
-
-var array = [];
-array;
+console.log('wazzaptest');

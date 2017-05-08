@@ -9,7 +9,7 @@ const gulp = require('gulp'),                           // gulp core
     rename = require("gulp-rename");                    // rename files
     concat = require('gulp-concat'),                    // concatinate js
     minifycss = require('gulp-clean-css'),              // minify the css files
-    browserSync = require('browser-sync'),              // inject code to all devices
+    browserSync = require('browser-sync').create(),     // inject code to all devices
     autoprefixer = require('gulp-autoprefixer'),        // sets missing browserprefixes
     imagemin = require('gulp-imagemin'),                // optimize images
     spritesmith = require('gulp.spritesmith'),          // generate sprites
@@ -20,9 +20,8 @@ const gulp = require('gulp'),                           // gulp core
     notify = require("gulp-notify"),
     babel = require("gulp-babel"),
     extractMediaQueries = require('gulp-extract-media-queries'),
-    sourcemaps = require('gulp-sourcemaps');
-
-    //@TODO insert sass without page reload. Close browersyng connection when stoping/starting gulp dev.
+    sourcemaps = require('gulp-sourcemaps'),
+    autoClose = require('browser-sync-close-hook');    // custom plugin to close browser tabs when gulp stops.
 
     
 /*******************************************************************************
@@ -89,13 +88,12 @@ gulp.task('less', function() {
         .pipe(browserSync.reload({stream:true, once: true}));
 });
 
-
 gulp.task('sass', function() {
     gulp.src(target.sass_src)                           // get the files
-	.pipe(plumber({errorHandler: notify.onError({
-		title: 'Sass',
-		message: "<%= error.message %>"
-		})}))
+        .pipe(plumber({errorHandler: notify.onError({
+            title: 'Sass',
+            message: "<%= error.message %>"
+        })}))
         .pipe(sourcemaps.init())
         .pipe(sass())                                   // compile all less
 		.on('error', beep)
@@ -107,13 +105,13 @@ gulp.task('sass', function() {
         .pipe(minifycss({specialComments:0}))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(target.css_dest))               // where to put the file
-        .pipe(browserSync.reload({stream:true, once: true}));
+        .pipe(browserSync.stream());
 });
  
  
 /*******************************************************************************
 4. JS TASKS
-**********************main.css*********************************************************/
+*******************************************************************************/
 
 // minify all js files that should not be concatinated
 gulp.task('js-uglify', function() {
@@ -160,12 +158,22 @@ gulp.task('js-other', function() {
 *******************************************************************************/
 
 gulp.task('browser-sync', function() {
-    browserSync.init(null, {        // files to inject
+    browserSync.use({
+       plugin() {},
+       hooks: {
+         'client:js': autoClose,
+       },
+     });
+
+    browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./",
         },
         notify: false,
+        ui: false,
+        online: false
     });
+
 });
 
 gulp.task('browser-sync-proxy', function() {
@@ -221,6 +229,9 @@ gulp.task('watch', function () {
     gulp.watch(target.js_concat_src, ['js-concat']);
     gulp.watch(["*.html",'*.php'], ['bs-reload']);
 });
+
+//CTRL +Z (SIGINT for CTRL + C)
+process.on('SIGTSTP', () => process.exit(1));
 
 gulp.task('default', [/*'js-uglify', */'js-concat'/*, 'js-other'*/, 'sass']);
 gulp.task('dev', ['js-concat', 'sass', 'browser-sync', 'watch']);

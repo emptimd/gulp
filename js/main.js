@@ -1,4 +1,1 @@
-console.log('wazzap');
-
-var array = [];
-array
+console.log('wazzaptest');
