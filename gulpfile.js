@@ -19,6 +19,8 @@ const gulp = require('gulp'),                           // gulp core
     plumber = require('gulp-plumber'),
     notify = require("gulp-notify"),
     babel = require("gulp-babel"),
+    gulpif = require("gulp-if"),
+    argv = require('yargs').argv,                       // get arguments from terminal
     extractMediaQueries = require('gulp-extract-media-queries'),
     sourcemaps = require('gulp-sourcemaps'),
     autoClose = require('browser-sync-close-hook');    // custom plugin to close browser tabs when gulp stops.
@@ -27,7 +29,8 @@ const gulp = require('gulp'),                           // gulp core
 /*******************************************************************************
 2. FILE DESTINATIONS (RELATIVE TO ASSSETS FOLDER)
 *******************************************************************************/
- 
+let isProduction = (argv.production === undefined) ? false : true;
+
 var target = {
     less_src : 'less/main.less',                        // all less files
     sass_src : [
@@ -98,12 +101,11 @@ gulp.task('sass', function() {
         .pipe(sass())                                   // compile all less
 		.on('error', beep)
         .pipe(autoprefixer({
-        	browsers: ['last 2 versions'],
             cascade: false
         }))
         // .pipe(extractMediaQueries())
         .pipe(minifycss({specialComments:0}))
-        .pipe(sourcemaps.write())
+        .pipe(gulpif(!argv.production, sourcemaps.write()))
         .pipe(gulp.dest(target.css_dest))               // where to put the file
         .pipe(browserSync.stream());
 });

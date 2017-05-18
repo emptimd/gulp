@@ -2,11 +2,12 @@
   "name": "test-project",
   "version": "0.0.0",
   "description": "Wp Project",
+  "comment-by-me" : "place here any comment",
   "theme": {
     "author": "Bogdan"
   },
   "devDependencies": {
-    "autoprefixer": "^6.3.6",
+    "autoprefixer": "^7.0.1",
     "babel-polyfill": "^6.9.0",
     "babel-preset-es2015": "^6.9.0",
     "browser-sync": "latest",
@@ -33,14 +34,18 @@
     "gulp-uglify": "latest",
     "gulp-util": "latest",
     "gulp.spritesmith": "latest",
-    "node-notifier": "latest",
-    "rev-del": "latest"
+    "node-notifier": "^5.1.2",
+    "rev-del": "latest",
+    "yargs": "^8.0.1"
   },
   "babel": {
     "presets": [
       "es2015"
     ]
   },
+  "browserslist": [
+    "last 2 versions"
+  ],
   "keywords": [
     "test-wp"
   ],

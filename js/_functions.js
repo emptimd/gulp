@@ -64,20 +64,20 @@ $.ajaxSetup({
  * @param {number} lang
  * @param {number} zoom
  */
-function googlemap(lat=10,lang=10,zoom=2) {
-	let mapCanvas = document.getElementById('map');
-	let latlng = new google.maps.LatLng(lat, lang);
-	let settings = {
-	zoom: zoom,
-	center: latlng,
-	mapTypeControl: true,
-	mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
-	navigationControl: true,
-	navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
-	mapTypeId: google.maps.MapTypeId.ROADMAP
-	};
-	let map = new google.maps.Map(mapCanvas, settings);
-}
+// function googlemap(lat=10,lang=10,zoom=2) {
+// 	let mapCanvas = document.getElementById('map');
+// 	let latlng = new google.maps.LatLng(lat, lang);
+// 	let settings = {
+// 	zoom: zoom,
+// 	center: latlng,
+// 	mapTypeControl: true,
+// 	mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+// 	navigationControl: true,
+// 	navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+// 	mapTypeId: google.maps.MapTypeId.ROADMAP
+// 	};
+// 	let map = new google.maps.Map(mapCanvas, settings);
+// }
 
 
 /*export default*/ function submit(action, values, method='POST') {
@@ -102,3 +102,11 @@ function googlemap(lat=10,lang=10,zoom=2) {
     });
     form.appendTo('body').submit();
 }
+
+// var clipboard = new Clipboard('#copy');
+// clipboard.on('success', function(e) {
+//     $copy.attr('title', 'Copied!');
+
+//     $copy.tooltip('show');
+//     $copy.attr('title', '');
+// });

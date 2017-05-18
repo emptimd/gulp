@@ -66,24 +66,21 @@ $.ajaxSetup({
  * @param {number} lang
  * @param {number} zoom
  */
-function googlemap() {
-    var lat = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 10;
-    var lang = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 10;
-    var zoom = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 2;
+// function googlemap(lat=10,lang=10,zoom=2) {
+// 	let mapCanvas = document.getElementById('map');
+// 	let latlng = new google.maps.LatLng(lat, lang);
+// 	let settings = {
+// 	zoom: zoom,
+// 	center: latlng,
+// 	mapTypeControl: true,
+// 	mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+// 	navigationControl: true,
+// 	navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+// 	mapTypeId: google.maps.MapTypeId.ROADMAP
+// 	};
+// 	let map = new google.maps.Map(mapCanvas, settings);
+// }
 
-    var mapCanvas = document.getElementById('map');
-    var latlng = new google.maps.LatLng(lat, lang);
-    var settings = {
-        zoom: zoom,
-        center: latlng,
-        mapTypeControl: true,
-        mapTypeControlOptions: { style: google.maps.MapTypeControlStyle.DROPDOWN_MENU },
-        navigationControl: true,
-        navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL },
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    var map = new google.maps.Map(mapCanvas, settings);
-}
 
 /*export default*/function submit(action, values) {
     var method = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'POST';
@@ -109,4 +106,12 @@ function googlemap() {
     });
     form.appendTo('body').submit();
 }
+
+// var clipboard = new Clipboard('#copy');
+// clipboard.on('success', function(e) {
+//     $copy.attr('title', 'Copied!');
+
+//     $copy.tooltip('show');
+//     $copy.attr('title', '');
+// });
 console.log('wazzaptest');
