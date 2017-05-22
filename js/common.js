@@ -114,4 +114,3 @@ $.ajaxSetup({
 //     $copy.tooltip('show');
 //     $copy.attr('title', '');
 // });
-console.log('wazzaptest');
