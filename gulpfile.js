@@ -44,7 +44,7 @@ var target = {
         'js/build/custom/scheme-loader.js'
     ],
     js_uglify_src : [                                   // all js files that should not be concatinated
-        'js/jquery.colorbox.js'
+        'js/vue.js'
     ],
     js_concat_src : [                                   // all js files that should be concatinated
         'js/_functions.js',
@@ -105,7 +105,7 @@ gulp.task('sass', function() {
         }))
         // .pipe(extractMediaQueries())
         .pipe(minifycss({specialComments:0}))
-        .pipe(gulpif(!argv.production, sourcemaps.write()))
+        .pipe(gulpif(!isProduction, sourcemaps.write()))
         .pipe(gulp.dest(target.css_dest))               // where to put the file
         .pipe(browserSync.stream());
 });
@@ -133,6 +133,8 @@ gulp.task('js-concat', function() {
             title: 'JS error',
             message: "<%= error.message %>"
         })}))
+        .pipe(gulpif(isProduction, stripDebug()))
+        
         // .pipe(stripDebug())                             // remove logging
         // .pipe(uglify())                                 // uglify the files
         .pipe(newer('js/common.js'))                    // only changed files
@@ -140,6 +142,7 @@ gulp.task('js-concat', function() {
         .pipe(babel({
             presets: ['es2015']
         }))
+        .pipe(gulpif(isProduction, uglify()))
         .on('error', beep)
         .pipe(gulp.dest(target.js_dest))                // where to put the files
         .pipe(browserSync.reload({stream:true, once: true}));

@@ -1,20 +1,17 @@
 @import "_variables";
 
-
 body {
 	background-color: #fff;
-	font-family: OpenSans, sans-serif;//Open Sans
+	font-family: Open Sans, sans-serif;
 	font-size: 16px;
 	line-height: 1.75;
 	color: $color;
-	// font-family: OpenSans;
 }
 
 .h1 {
 	font-size: 55px;
 	color: #fff;
 	border-radius: 10px;
-
 }
 
 .h2 {
@@ -24,13 +21,18 @@ body {
 .h3 {
 	font-size: 21px;
 	letter-spacing: 5px;
-	// font-weight: 400;
 	margin-top: 0;
 }
 
 .h4 {
 	font-size: 16px;
 	font-weight: 300;
-	color: $green-darker2;
 	margin-top: 20px;
+}
+
+#canvas {
+	background-color: gray;
+	margin: 50px;
+	width: 300px;
+	height: 300px;//
 }

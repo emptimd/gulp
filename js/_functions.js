@@ -1,9 +1,9 @@
 /*---CSRF TOKEN---*/
-$.ajaxSetup({
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-});
+// $.ajaxSetup({
+//     headers: {
+//         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+//     }
+// });
 
 /**
  * Get background color of elemet.
@@ -80,7 +80,7 @@ $.ajaxSetup({
 // }
 
 
-/*export default*/ function submit(action, values, method='POST') {
+/*export default*/ /*function submit(action, values, method='POST') {
     var form = $('<form/>', {
         action: action,
         method: method
@@ -101,7 +101,7 @@ $.ajaxSetup({
         }));
     });
     form.appendTo('body').submit();
-}
+}*/
 
 // var clipboard = new Clipboard('#copy');
 // clipboard.on('success', function(e) {
