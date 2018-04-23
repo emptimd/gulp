@@ -1,7 +1,7 @@
 /*******************************************************************************
 1. DEPENDENCIES
 *******************************************************************************/
- 
+
 const gulp = require('gulp'),                           // gulp core
     less = require('gulp-less'),                        // less compiler
     sass = require('gulp-sass'),                        // sass compiler
@@ -18,14 +18,14 @@ const gulp = require('gulp'),                           // gulp core
     newer = require('gulp-newer'),                      // check files for changes
     plumber = require('gulp-plumber'),
     notify = require("gulp-notify"),
-    babel = require("gulp-babel"),
+    // babel = require("gulp-babel"),
     gulpif = require("gulp-if"),
     argv = require('yargs').argv,                       // get arguments from terminal
     extractMediaQueries = require('gulp-extract-media-queries'),
     sourcemaps = require('gulp-sourcemaps'),
     autoClose = require('browser-sync-close-hook');    // custom plugin to close browser tabs when gulp stops.
 
-    
+
 /*******************************************************************************
 2. FILE DESTINATIONS (RELATIVE TO ASSSETS FOLDER)
 *******************************************************************************/
@@ -44,7 +44,7 @@ var target = {
         'js/build/custom/scheme-loader.js'
     ],
     js_uglify_src : [                                   // all js files that should not be concatinated
-        'js/vue.js'
+        ''
     ],
     js_concat_src : [                                   // all js files that should be concatinated
         'js/_functions.js',
@@ -65,7 +65,7 @@ var other = {                                           // other js files to be 
 }
 
 var currentSprite = 'payment';
- 
+
 /*******************************************************************************
 3. LESS TASK
 *******************************************************************************/
@@ -109,8 +109,8 @@ gulp.task('sass', function() {
         .pipe(gulp.dest(target.css_dest))               // where to put the file
         .pipe(browserSync.stream());
 });
- 
- 
+
+
 /*******************************************************************************
 4. JS TASKS
 *******************************************************************************/
@@ -125,7 +125,7 @@ gulp.task('js-uglify', function() {
         }))
         .pipe(gulp.dest(target.js_dest));               // where to put the files
 });
- 
+
 // minify & concatinate main js files
 gulp.task('js-concat', function() {
     gulp.src(target.js_concat_src)                      // get the files
@@ -134,14 +134,14 @@ gulp.task('js-concat', function() {
             message: "<%= error.message %>"
         })}))
         .pipe(gulpif(isProduction, stripDebug()))
-        
+
         // .pipe(stripDebug())                             // remove logging
         // .pipe(uglify())                                 // uglify the files
         .pipe(newer('js/common.js'))                    // only changed files
         .pipe(concat('common.js'))                      // concatinate to one file
-        .pipe(babel({
-            presets: ['es2015']
-        }))
+        // .pipe(babel({
+        //     presets: ['es2015']
+        // }))
         .pipe(gulpif(isProduction, uglify()))
         .on('error', beep)
         .pipe(gulp.dest(target.js_dest))                // where to put the files
@@ -154,7 +154,7 @@ gulp.task('js-other', function() {
         .pipe(stripDebug())                             // remove logging
         .pipe(uglify())                                 // uglify the files
         .pipe(newer('js/carusel.js'))                   // only changed files
-        .pipe(concat('carusel.js'))                     // concatinate to one file        
+        .pipe(concat('carusel.js'))                     // concatinate to one file
         .pipe(gulp.dest(target.js_dest));               // where to put the files
 });
 
