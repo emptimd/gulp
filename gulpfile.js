@@ -208,7 +208,7 @@ gulp.task('image-min', function() {
 *******************************************************************************/
 
 gulp.task('sprite', function () {
-  var spriteData = gulp.src('img/sprites/'+currentSprite+'/*.png').pipe(spritesmith({
+  var spriteData = gulp.src('images/sprites/'+currentSprite+'/*.png').pipe(spritesmith({
     imgName: currentSprite+'.png',
     cssName: currentSprite+'.sass',
     engine: 'pngsmith',
@@ -219,7 +219,7 @@ gulp.task('sprite', function () {
     // }
     padding: 1
   }));
-  spriteData.img.pipe(gulp.dest('img/'));
+  spriteData.img.pipe(gulp.dest('images/'));
   spriteData.css.pipe(gulp.dest('less/sprites/'));
 });
 
