@@ -110,6 +110,7 @@
 //     $copy.tooltip('show');
 //     $copy.attr('title', '');
 // });
+function adsd1(){}
 $(function() {
 	let timer;
 

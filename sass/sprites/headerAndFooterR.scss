@@ -1,0 +1,211 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$s-ata-bg-name: 's-ata-bg';
+$s-ata-bg-x: 170px;
+$s-ata-bg-y: 0px;
+$s-ata-bg-offset-x: -170px;
+$s-ata-bg-offset-y: 0px;
+$s-ata-bg-width: 127px;
+$s-ata-bg-height: 70px;
+$s-ata-bg-total-width: 394px;
+$s-ata-bg-total-height: 283px;
+$s-ata-bg-image: 'headerAndFooterR.png';
+$s-ata-bg: (170px, 0px, -170px, 0px, 127px, 70px, 394px, 283px, 'headerAndFooterR.png', 's-ata-bg', );
+$s-ata-name: 's-ata';
+$s-ata-x: 170px;
+$s-ata-y: 71px;
+$s-ata-offset-x: -170px;
+$s-ata-offset-y: -71px;
+$s-ata-width: 127px;
+$s-ata-height: 70px;
+$s-ata-total-width: 394px;
+$s-ata-total-height: 283px;
+$s-ata-image: 'headerAndFooterR.png';
+$s-ata: (170px, 71px, -170px, -71px, 127px, 70px, 394px, 283px, 'headerAndFooterR.png', 's-ata', );
+$s-elia-bg-name: 's-elia-bg';
+$s-elia-bg-x: 112px;
+$s-elia-bg-y: 213px;
+$s-elia-bg-offset-x: -112px;
+$s-elia-bg-offset-y: -213px;
+$s-elia-bg-width: 111px;
+$s-elia-bg-height: 70px;
+$s-elia-bg-total-width: 394px;
+$s-elia-bg-total-height: 283px;
+$s-elia-bg-image: 'headerAndFooterR.png';
+$s-elia-bg: (112px, 213px, -112px, -213px, 111px, 70px, 394px, 283px, 'headerAndFooterR.png', 's-elia-bg', );
+$s-elia-name: 's-elia';
+$s-elia-x: 0px;
+$s-elia-y: 142px;
+$s-elia-offset-x: 0px;
+$s-elia-offset-y: -142px;
+$s-elia-width: 121px;
+$s-elia-height: 70px;
+$s-elia-total-width: 394px;
+$s-elia-total-height: 283px;
+$s-elia-image: 'headerAndFooterR.png';
+$s-elia: (0px, 142px, 0px, -142px, 121px, 70px, 394px, 283px, 'headerAndFooterR.png', 's-elia', );
+$s-gala-bg-name: 's-gala-bg';
+$s-gala-bg-x: 298px;
+$s-gala-bg-y: 0px;
+$s-gala-bg-offset-x: -298px;
+$s-gala-bg-offset-y: 0px;
+$s-gala-bg-width: 96px;
+$s-gala-bg-height: 70px;
+$s-gala-bg-total-width: 394px;
+$s-gala-bg-total-height: 283px;
+$s-gala-bg-image: 'headerAndFooterR.png';
+$s-gala-bg: (298px, 0px, -298px, 0px, 96px, 70px, 394px, 283px, 'headerAndFooterR.png', 's-gala-bg', );
+$s-gala-name: 's-gala';
+$s-gala-x: 298px;
+$s-gala-y: 71px;
+$s-gala-offset-x: -298px;
+$s-gala-offset-y: -71px;
+$s-gala-width: 96px;
+$s-gala-height: 70px;
+$s-gala-total-width: 394px;
+$s-gala-total-height: 283px;
+$s-gala-image: 'headerAndFooterR.png';
+$s-gala: (298px, 71px, -298px, -71px, 96px, 70px, 394px, 283px, 'headerAndFooterR.png', 's-gala', );
+$s-gala2-bg-name: 's-gala2-bg';
+$s-gala2-bg-x: 298px;
+$s-gala2-bg-y: 213px;
+$s-gala2-bg-offset-x: -298px;
+$s-gala2-bg-offset-y: -213px;
+$s-gala2-bg-width: 93px;
+$s-gala2-bg-height: 70px;
+$s-gala2-bg-total-width: 394px;
+$s-gala2-bg-total-height: 283px;
+$s-gala2-bg-image: 'headerAndFooterR.png';
+$s-gala2-bg: (298px, 213px, -298px, -213px, 93px, 70px, 394px, 283px, 'headerAndFooterR.png', 's-gala2-bg', );
+$s-gala2-name: 's-gala2';
+$s-gala2-x: 298px;
+$s-gala2-y: 142px;
+$s-gala2-offset-x: -298px;
+$s-gala2-offset-y: -142px;
+$s-gala2-width: 93px;
+$s-gala2-height: 70px;
+$s-gala2-total-width: 394px;
+$s-gala2-total-height: 283px;
+$s-gala2-image: 'headerAndFooterR.png';
+$s-gala2: (298px, 142px, -298px, -142px, 93px, 70px, 394px, 283px, 'headerAndFooterR.png', 's-gala2', );
+$s-gala3-name: 's-gala3';
+$s-gala3-x: 122px;
+$s-gala3-y: 142px;
+$s-gala3-offset-x: -122px;
+$s-gala3-offset-y: -142px;
+$s-gala3-width: 111px;
+$s-gala3-height: 70px;
+$s-gala3-total-width: 394px;
+$s-gala3-total-height: 283px;
+$s-gala3-image: 'headerAndFooterR.png';
+$s-gala3: (122px, 142px, -122px, -142px, 111px, 70px, 394px, 283px, 'headerAndFooterR.png', 's-gala3', );
+$s-gala4-name: 's-gala4';
+$s-gala4-x: 0px;
+$s-gala4-y: 213px;
+$s-gala4-offset-x: 0px;
+$s-gala4-offset-y: -213px;
+$s-gala4-width: 111px;
+$s-gala4-height: 70px;
+$s-gala4-total-width: 394px;
+$s-gala4-total-height: 283px;
+$s-gala4-image: 'headerAndFooterR.png';
+$s-gala4: (0px, 213px, 0px, -213px, 111px, 70px, 394px, 283px, 'headerAndFooterR.png', 's-gala4', );
+$s-iti-bg-name: 's-iti-bg';
+$s-iti-bg-x: 0px;
+$s-iti-bg-y: 71px;
+$s-iti-bg-offset-x: 0px;
+$s-iti-bg-offset-y: -71px;
+$s-iti-bg-width: 169px;
+$s-iti-bg-height: 70px;
+$s-iti-bg-total-width: 394px;
+$s-iti-bg-total-height: 283px;
+$s-iti-bg-image: 'headerAndFooterR.png';
+$s-iti-bg: (0px, 71px, 0px, -71px, 169px, 70px, 394px, 283px, 'headerAndFooterR.png', 's-iti-bg', );
+$s-iti-name: 's-iti';
+$s-iti-x: 0px;
+$s-iti-y: 0px;
+$s-iti-offset-x: 0px;
+$s-iti-offset-y: 0px;
+$s-iti-width: 169px;
+$s-iti-height: 70px;
+$s-iti-total-width: 394px;
+$s-iti-total-height: 283px;
+$s-iti-image: 'headerAndFooterR.png';
+$s-iti: (0px, 0px, 0px, 0px, 169px, 70px, 394px, 283px, 'headerAndFooterR.png', 's-iti', );
+$spritesheet-width: 394px;
+$spritesheet-height: 283px;
+$spritesheet-image: 'headerAndFooterR.png';
+$spritesheet-sprites: ($s-ata-bg, $s-ata, $s-elia-bg, $s-elia, $s-gala-bg, $s-gala, $s-gala2-bg, $s-gala2, $s-gala3, $s-gala4, $s-iti-bg, $s-iti, );
+$spritesheet: (394px, 283px, 'headerAndFooterR.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

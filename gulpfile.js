@@ -34,8 +34,7 @@ let isProduction = (argv.production === undefined) ? false : true;
 var target = {
     less_src : 'less/main.less',                        // all less files
     sass_src : [
-        'sass/main.scss',
-        'sass/bootstrap.scss'
+        'sass/main.scss'
     ],
     css_dest : 'css',                                   // where to put minified css
     js_lint_src : [                                     // all js that should be linted
@@ -44,7 +43,7 @@ var target = {
         'js/build/custom/scheme-loader.js'
     ],
     js_uglify_src : [                                   // all js files that should not be concatinated
-        ''
+        'js/main.js'
     ],
     js_concat_src : [                                   // all js files that should be concatinated
         'js/_functions.js',
@@ -64,34 +63,17 @@ var other = {                                           // other js files to be 
     ]
 }
 
-var currentSprite = 'payment';
+var currentSprite = 'headerAndFooterR';
 
 /*******************************************************************************
-3. LESS TASK
+3. Sass TASK
 *******************************************************************************/
 var beep = function() {
 var exec = require('child_process').exec;
 	exec('canberra-gtk-play --file=/usr/share/sounds/freedesktop/stereo/dialog-error.oga');
 }
 
-
-gulp.task('less', function() {
-    gulp.src(target.less_src)                           // get the files
-	.pipe(plumber({errorHandler: notify.onError({
-		title: 'test',
-		message: "<%= error.message %>"
-		})}))
-        .pipe(less())                                   // compile all less
-		.on('error', beep)
-        .pipe(autoprefixer({                             // complete css with correct vendor prefixes
-        	browsers: ['last 2 versions'],
-        }))
-        .pipe(minifycss({specialComments:0}))
-        .pipe(gulp.dest(target.css_dest))               // where to put the file
-        .pipe(browserSync.reload({stream:true, once: true}));
-});
-
-gulp.task('sass', function() {
+function sassTask(done) {
     gulp.src(target.sass_src)                           // get the files
         .pipe(plumber({errorHandler: notify.onError({
             title: 'Sass',
@@ -108,15 +90,15 @@ gulp.task('sass', function() {
         .pipe(gulpif(!isProduction, sourcemaps.write()))
         .pipe(gulp.dest(target.css_dest))               // where to put the file
         .pipe(browserSync.stream());
-});
-
+        done();
+};
 
 /*******************************************************************************
 4. JS TASKS
 *******************************************************************************/
 
 // minify all js files that should not be concatinated
-gulp.task('js-uglify', function() {
+gulp.task('js-uglify', function(done) {
     gulp.src(target.js_uglify_src)                      // get the files
         .pipe(stripDebug())                             // remove logging
         .pipe(uglify())                                 // uglify the files
@@ -124,10 +106,11 @@ gulp.task('js-uglify', function() {
             path.basename += ".min";
         }))
         .pipe(gulp.dest(target.js_dest));               // where to put the files
+        done();
 });
 
 // minify & concatinate main js files
-gulp.task('js-concat', function() {
+function jsConcat(done) {
     gulp.src(target.js_concat_src)                      // get the files
         .pipe(plumber({errorHandler: notify.onError({
             title: 'JS error',
@@ -146,17 +129,20 @@ gulp.task('js-concat', function() {
         .on('error', beep)
         .pipe(gulp.dest(target.js_dest))                // where to put the files
         .pipe(browserSync.reload({stream:true, once: true}));
-});
+        done();
+};
 
 // minify & concatinate all other js
-gulp.task('js-other', function() {
+gulp.task('js-other', function(done) {
     gulp.src(other.carusel)                             // get the files
         .pipe(stripDebug())                             // remove logging
         .pipe(uglify())                                 // uglify the files
         .pipe(newer('js/carusel.js'))                   // only changed files
         .pipe(concat('carusel.js'))                     // concatinate to one file
         .pipe(gulp.dest(target.js_dest));               // where to put the files
+        done();
 });
+
 
 /*******************************************************************************
 5. BROWSER SYNC
@@ -196,32 +182,35 @@ gulp.task('bs-reload', function () {
 6. Images
 *******************************************************************************/
 
-gulp.task('image-min', function() {
+gulp.task('image-min', function(done) {
     gulp.src(target.img)                                // get the files
         .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
         .pipe(gulp.dest('images/'))                       // where to put the files
-	.pipe(notify({ message: 'Images task complete',onLast: true }));
+    .pipe(notify({ message: 'Images task complete',onLast: true }));
+    done();
 });
 
 /*******************************************************************************
 7. Sprites
 *******************************************************************************/
 
-gulp.task('sprite', function () {
+gulp.task('sprite', function (done) {
   var spriteData = gulp.src('images/sprites/'+currentSprite+'/*.png').pipe(spritesmith({
     imgName: currentSprite+'.png',
-    cssName: currentSprite+'.sass',
-    engine: 'pngsmith',
+    cssName: currentSprite+'.scss',
+    // engine: 'pngsmith',
     algorithm: 'binary-tree',
-    cssTemplate: 'stylus.template.mustache',
-    // cssVarMap: function(sprite) {
-    //     sprite.name = 's-' + sprite.name
-    // }
+    // cssTemplate: 'stylus.template.mustache',
+    cssVarMap: function(sprite) {
+        sprite.name = 's-' + sprite.name
+    },
     padding: 1
   }));
   spriteData.img.pipe(gulp.dest('images/'));
-  spriteData.css.pipe(gulp.dest('less/sprites/'));
+  spriteData.css.pipe(gulp.dest('sass/sprites/'));
+  done();
 });
+
 
 
 /*******************************************************************************
@@ -229,17 +218,21 @@ gulp.task('sprite', function () {
 *******************************************************************************/
 
 gulp.task('watch', function () {
-    // gulp.watch('less/**/*.less',['less']);
-    gulp.watch('sass/**/*.scss',['sass']);
-    gulp.watch(target.js_concat_src, ['js-concat']);
-    gulp.watch(["*.html",'*.php'], ['bs-reload']);
+    gulp.watch('sass/**/*.scss', sassTask);
+    gulp.watch(target.js_concat_src, jsConcat);
+    gulp.watch(["*.html",'*.php'], bsReload);
 });
+
+
+exports.sass = sassTask;
+exports.dev = gulp.parallel(sassTask, jsConcat, gulp.series(['browser-sync', 'watch']));
+exports.build = gulp.parallel(sassTask, jsConcat, gulp.series(['browser-sync-proxy', 'watch']));
 
 //CTRL +Z (SIGINT for CTRL + C)
 process.on('SIGTSTP', () => process.exit(1));
 
-gulp.task('default', [/*'js-uglify', */'js-concat'/*, 'js-other'*/, 'sass']);
-gulp.task('dev', ['js-concat', 'sass', 'browser-sync', 'watch']);
-gulp.task('build', ['js-concat', 'sass', 'browser-sync-proxy', 'watch']);
-gulp.task('images', ['image-min']);
-gulp.task('sprites', ['sprite']);
+// gulp.task('default', [/*'js-uglify', */'js-concat'/*, 'js-other'*/, 'sass']);
+// gulp.task('dev', dev);
+// gulp.task('build', ['js-concat', 'sass', 'browser-sync-proxy', 'watch']);
+// gulp.task('images', ['image-min']);
+// gulp.task('sprites', ['sprite']);
