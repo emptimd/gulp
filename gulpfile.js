@@ -24,6 +24,7 @@ const gulp = require('gulp'),                           // gulp core
     extractMediaQueries = require('gulp-extract-media-queries'),
     sourcemaps = require('gulp-sourcemaps'),
     autoClose = require('browser-sync-close-hook');    // custom plugin to close browser tabs when gulp stops.
+    postcss = require('gulp-postcss');
 
 
 /*******************************************************************************
@@ -34,7 +35,7 @@ let isProduction = (argv.production === undefined) ? false : true;
 var target = {
     less_src : 'less/main.less',                        // all less files
     sass_src : [
-        'sass/main.scss'
+        'sass/frontend.scss'
     ],
     css_dest : 'css',                                   // where to put minified css
     js_lint_src : [                                     // all js that should be linted
@@ -79,19 +80,36 @@ function sassTask(done) {
             title: 'Sass',
             message: "<%= error.message %>"
         })}))
-        .pipe(sourcemaps.init())
+        // .pipe(sourcemaps.init())
         .pipe(sass())                                   // compile all less
 		.on('error', beep)
         .pipe(autoprefixer({
             cascade: false
         }))
+        // .pipe($.postcss())
         // .pipe(extractMediaQueries())
         .pipe(minifycss({specialComments:0}))
-        .pipe(gulpif(!isProduction, sourcemaps.write()))
+        .pipe(postcss())
+        // .pipe(gulpif(!isProduction, sourcemaps.write()))
         .pipe(gulp.dest(target.css_dest))               // where to put the file
         .pipe(browserSync.stream());
         done();
 };
+
+
+
+function cssTask(done) {
+    gulp.src('css/frontend.css')                           // get the files
+        .pipe($.postcss())
+        // .pipe(minifycss({specialComments:0}))
+        // .pipe(gulpif(!isProduction, sourcemaps.write()))
+        .pipe(gulp.dest(target.css_dest))               // where to put the file
+        // .pipe(browserSync.stream());
+        done();
+};
+
+
+
 
 /*******************************************************************************
 4. JS TASKS
@@ -224,6 +242,7 @@ gulp.task('watch', function () {
 });
 
 
+exports.css = cssTask;
 exports.sass = sassTask;
 exports.dev = gulp.parallel(sassTask, jsConcat, gulp.series(['browser-sync', 'watch']));
 exports.build = gulp.parallel(sassTask, jsConcat, gulp.series(['browser-sync-proxy', 'watch']));
